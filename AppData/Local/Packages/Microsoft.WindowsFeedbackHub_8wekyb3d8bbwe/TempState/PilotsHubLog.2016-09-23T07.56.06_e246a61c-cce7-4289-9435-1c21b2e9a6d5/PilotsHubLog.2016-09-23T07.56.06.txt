@@ -1,0 +1,299 @@
+09/23/2016 07:56:07       Info            Activity ID: 75486c2d-9ee9-4e9e-82f7-6ca164c21996
+09/23/2016 07:56:07       Info            App Version: 1.6.2221.0
+09/23/2016 07:56:07       Info            Insider's Hub starting; Online state: 'Unknown', DebuggerAttached: 'False', Debug: 'False'
+09/23/2016 07:56:07       Info            OnActivated.Start[237]
+09/23/2016 07:56:07       Info            PilotsHubProtocolActivated, kind: Protocol, prevexecstate: NotRunning, uri: windows-feedback:?contextid=98
+09/23/2016 07:56:07       Info            HandleActivation.Start[244]
+09/23/2016 07:56:07       Info            GetInstalledLegacyApps.Start[246]
+09/23/2016 07:56:07       Info            GetInstalledModernApps.Start[253]
+09/23/2016 07:56:07       Info            GetPublicModernApps.Start[253]
+09/23/2016 07:56:07       Info            HandleActivation.Start[612]
+09/23/2016 07:56:07       Info            PilotsHubStartLaunch
+09/23/2016 07:56:07       Info            IsLegacyUifActivation True
+09/23/2016 07:56:07       Info            HandleActivation.Stop[896] Elapsed MS [285]
+09/23/2016 07:56:07       Info            OnActivated.Stop[896] Elapsed MS [659]
+09/23/2016 07:56:07       Info            RunChecks.Start[1155]
+09/23/2016 07:56:07       Info            Beginning start up checks. Previously ran [False]
+09/23/2016 07:56:07       Info            RefreshNetworkConnection.Start[1155]
+09/23/2016 07:56:07       Info            Refreshing network status
+09/23/2016 07:56:07       Info            No internet connectivity profile was detected
+09/23/2016 07:56:07       Info            Current network status - Disconnected
+09/23/2016 07:56:07       Info            RefreshNetworkConnection.Stop[1212] Elapsed MS [57]
+09/23/2016 07:56:07       Info            RefreshAuthentication.Start[1212]
+09/23/2016 07:56:07       Info            Refreshing authentication for feedback service
+09/23/2016 07:56:08       Info            Authenticating
+09/23/2016 07:56:08       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:08       Info            Failed to sign in: log off
+09/23/2016 07:56:08       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:08       Info            RefreshAuthentication.Stop[2135] Elapsed MS [923]
+09/23/2016 07:56:08       Info            RefreshUserSettings.Start[2135]
+09/23/2016 07:56:08       Info            GetUserSettings.Start[2176]
+09/23/2016 07:56:08       Info            GetWebContent.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/usersettings].Start[2191]
+09/23/2016 07:56:08       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/usersettings].Start[2191]
+09/23/2016 07:56:08       Info            Authenticating
+09/23/2016 07:56:08       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:08       Info            Failed to sign in: log off
+09/23/2016 07:56:08       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:08       Info            FeedbackError, errorCode 4, message Couldn't get feedback user settings from the service in GetUserSettings(), exceptionMessage Authentication ticket is null or empty, exceptionType System.Exception, hResult -2146233088, environmentName UIF_Production, activityId 75486c2d-9ee9-4e9e-82f7-6ca164c21996
+09/23/2016 07:56:08       Info            GetUserSettings.Stop[2306] Elapsed MS [130]
+09/23/2016 07:56:08       Info            Feedback user settings retrieval unsuccessful, user settings are null
+09/23/2016 07:56:08       Info            GetUserSettingsAsync.Start[2306]
+09/23/2016 07:56:08       Info            PilotsHubQueryServiceStart, type: PilotContracts.DataContracts.UserSettingsV4, uri: usersettingsv5?locale=en-US
+09/23/2016 07:56:08       Info            AddHeaderInformationAsync.Start[2488]
+09/23/2016 07:56:08       Info            Authenticating
+09/23/2016 07:56:09       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:09       Info            Failed to sign in: log off
+09/23/2016 07:56:09       Info            PilotsHubAuthenticationError, endpoint: https://insiderhub.microsoft.com/PilotService.svc/, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:09       Info            AddHeaderInformationAsync.Stop[2729] Elapsed MS [241]
+09/23/2016 07:56:09       Error           An error occured downloading user settings from [usersettingsv5?locale=en-US] in [en-US], System.Exception: Pilot Service: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x54ff62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x54eeca
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4d0464
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x6b93bb
+09/23/2016 07:56:09       Info            GetUserSettingsAsync.Stop[2939] Elapsed MS [633]
+09/23/2016 07:56:09       Info            Pilot Service user settings retrieval unsuccessful, user settings are null
+09/23/2016 07:56:09       Info            User settings valid [False]
+09/23/2016 07:56:09       Info            RefreshUserSettings.Stop[2939] Elapsed MS [804]
+09/23/2016 07:56:09       Info            Finished start up checks. HasInternetConnection False, IsAuthenticated False, HasUserSettings False, PrivacyStatus L3[True] L4[True] Insider[False], HasSeenWelcomePage False, ValidBuild False.
+09/23/2016 07:56:09       Info            RunChecks.Stop[2966] Elapsed MS [1812]
+09/23/2016 07:56:09       Info            GetStartupState [NoNetwork]
+09/23/2016 07:56:09       Info            IsRestrictedStartupState [True] State [NoNetwork]
+09/23/2016 07:56:09       Info            HandleAppActivation.Start[3024]
+09/23/2016 07:56:09       Info            WaitForContentLoadedAsync.Start[3302]
+09/23/2016 07:56:09       Info            Categories - Checking for content in memory HasContent[False]
+09/23/2016 07:56:09       Info            LoadDataAsync.PilotsHubApp.ViewModel.UIF.CategoriesVM.Start[3311]
+09/23/2016 07:56:09       Info            Loading PilotsHubApp.ViewModel.UIF.CategoriesVM based on network status[Disconnected] strategy[LoadFromCacheBackgroundDownload]
+09/23/2016 07:56:09       Info            PilotsHubApp.ViewModel.UIF.CategoriesVM: Loading data from persistence store
+09/23/2016 07:56:09       Info            PilotsHubApp.ViewModel.UIF.CategoriesVM: Downloading network data async in background
+09/23/2016 07:56:09       Info            NetworkLoad.PilotsHubApp.ViewModel.UIF.CategoriesVM.Start[3563]
+09/23/2016 07:56:09       Info            GetWebContent.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/clientsettings].Start[3631]
+09/23/2016 07:56:09       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/clientsettings].Start[3631]
+09/23/2016 07:56:09       Info            Authenticating
+09/23/2016 07:56:09       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/displaycategories?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00].Start[3632]
+09/23/2016 07:56:09       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/displaycategories?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00].Start[3632]
+09/23/2016 07:56:09       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/contexts?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00&contextFileVersion=V3].Start[3633]
+09/23/2016 07:56:09       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/contexts?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00&contextFileVersion=V3].Start[3633]
+09/23/2016 07:56:09       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/diagnostics?&formFactorBitmask=1].Start[3633]
+09/23/2016 07:56:09       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/diagnostics?&formFactorBitmask=1].Start[3633]
+09/23/2016 07:56:09       Info            LoadDataAsync.PilotsHubApp.ViewModel.UIF.CategoriesVM.Stop[3640] Elapsed MS [330]
+09/23/2016 07:56:09       Info            Finished loading PilotsHubApp.ViewModel.UIF.CategoriesVM based result - Complete
+09/23/2016 07:56:09       Info            WaitForContentLoadedAsync.Stop[3640] Elapsed MS [339]
+09/23/2016 07:56:09       Info            Failed to find and select the context ID of [98]
+09/23/2016 07:56:09       Info            .ctor.Shell.Start[3641]
+09/23/2016 07:56:10       Info            .ctor.Shell.Stop[4298] Elapsed MS [658]
+09/23/2016 07:56:10       Info            HandleAppActivation.Stop[4411] Elapsed MS [1387]
+09/23/2016 07:56:10       Info            NavigateToPage.restricted.Start[4411]
+09/23/2016 07:56:10       Info            GetStartupState [NoNetwork]
+09/23/2016 07:56:10       Info            IsRestrictedStartupState [True] State [NoNetwork]
+09/23/2016 07:56:10       Info            OnNavigatedTo.LayoutAwarePage.Start[4558]
+09/23/2016 07:56:10       Info            OnNavigatedTo.LayoutAwarePage.Stop[4559] Elapsed MS [0]
+09/23/2016 07:56:10       Info            NavigateToPage.restricted.Stop[4560] Elapsed MS [149]
+09/23/2016 07:56:10       Info            HandleActivation.Stop[4560] Elapsed MS [3948]
+09/23/2016 07:56:10       Info            PilotsHubEndLaunch
+09/23/2016 07:56:10       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:10       Info            Failed to sign in: log off
+09/23/2016 07:56:10       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:10       Info            FeedbackError, errorCode 54, message Couldn't get client settings from the service in GetClientSettings(), exceptionMessage Authentication ticket is null or empty, exceptionType System.Exception, hResult -2146233088, environmentName UIF_Production, activityId 75486c2d-9ee9-4e9e-82f7-6ca164c21996
+09/23/2016 07:56:10       Info            Authenticating
+09/23/2016 07:56:11       Info            PageLoaded.Start[4915]
+09/23/2016 07:56:11       Info            PageLoaded.Stop[4945] Elapsed MS [30]
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+09/23/2016 07:56:11       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/displaycategories?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00].Start[5009]
+09/23/2016 07:56:11       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/displaycategories?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00].Start[5009]
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/contexts?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00&contextFileVersion=V3].Start[5010]
+09/23/2016 07:56:11       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/contexts?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00&contextFileVersion=V3].Start[5010]
+09/23/2016 07:56:11       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/diagnostics?&formFactorBitmask=1].Start[5010]
+09/23/2016 07:56:11       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/diagnostics?&formFactorBitmask=1].Start[5010]
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+09/23/2016 07:56:11       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/displaycategories?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00].Start[5033]
+09/23/2016 07:56:11       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/displaycategories?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00].Start[5033]
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/contexts?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00&contextFileVersion=V3].Start[5034]
+09/23/2016 07:56:11       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/contexts?language=en-US&formFactorBitmask=1&lastUpdateTime=01/01/0001 00:00:00&contextFileVersion=V3].Start[5034]
+09/23/2016 07:56:11       Info            GetWebContentStream.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/diagnostics?&formFactorBitmask=1].Start[5034]
+09/23/2016 07:56:11       Info            CreateWebRequest.Uri[https://uif.microsoft.com/FeedbackCloudService.svc/diagnostics?&formFactorBitmask=1].Start[5034]
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Info            Authenticating
+09/23/2016 07:56:11       Info            Token request returned status: UserInteractionRequired and message: 
+09/23/2016 07:56:11       Info            Failed to sign in: log off
+09/23/2016 07:56:11       Info            PilotsHubAuthenticationError, endpoint: https://uif.microsoft.com/FeedbackCloudService.svc, flightingSignInSuccess: False, normalSignInSuccess: False
+09/23/2016 07:56:11       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+09/23/2016 07:56:11       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+   at PilotshubApp!<BaseAddress>+0x67d310
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4b841c
+09/23/2016 07:56:11       Info            NetworkLoad.PilotsHubApp.ViewModel.UIF.CategoriesVM.Stop[5059] Elapsed MS [1496]
+09/23/2016 07:56:13       Info            GetPublicModernApps.Stop[6705] Elapsed MS [6453]
+09/23/2016 07:56:13       Info            GetInstalledModernApps.Stop[6718] Elapsed MS [6465]

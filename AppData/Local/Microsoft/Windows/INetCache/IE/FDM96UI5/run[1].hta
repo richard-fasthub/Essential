@@ -1,0 +1,95 @@
+<!--[if gt IE 6]>
+<!DOCTYPE html>
+<![endif]-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" style="background-color: #394659;">
+	<head>
+	<title>DriverPack Solution</title>
+	<meta HTTP-EQUIV="MSThemeCompatible" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=9">
+
+	<!-- { IF [NOSCRIPT] } -->
+	<noscript>
+		<meta http-equiv="refresh" content="10;URL='http://drp.su/error/noscript/'">
+	</noscript>
+
+	<style>
+	html, body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.hta-loading-screen {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		background-color: #394659;
+	}
+	.hta-loading-screen_logo {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 371px;
+		height: 165px;
+		margin: -101px auto auto -183px;
+			background: url('../img/screens/new-logo.png') no-repeat;
+			_background:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/screens/new-logo.png',sizingMethod='crop');
+		}
+	</style>
+
+	<HTA:APPLICATION ID="dpa"
+		application="yes"
+		applicationName="DriverPack Solution"
+		border="none"
+		caption="no"
+		contextMenu="no"
+		icon="./Icon.ico"
+		innerBorder="no"
+		maximizeButton="yes"
+		minimizeButton="yes"
+		navigable="yes"
+		scroll="no"
+		scrollFlat="no"
+		selection="yes"
+		showInTaskBar="yes"
+		singleInstance="no"
+		sysMenu="yes"
+		version="0.1"
+		windowState="normal"
+	/>
+
+		<script type="text/javascript">
+			try {
+				var windowWidth = screen.availWidth;
+				var windowHeight = screen.availHeight;
+				window.resizeTo(windowWidth, windowHeight);
+				window.moveTo(0, 0)
+			} catch (e) { }
+
+
+			var cmd = dpa.commandLine;
+			//cmd = cmd.substring(cmd.indexOf(' ')+1);
+			if (cmd != ''){
+				cmd = '#' + encodeURIComponent(cmd);
+			}
+
+			try {
+				window.onload = function () {
+					window.location.href = '..\\DriverPackSolution.html' + cmd;
+				}
+			}
+			catch(e){
+				document.write('<meta http-equiv="refresh" content="0;URL=\'..\\DriverPackSolution.html' + cmd + '\'">');
+			}
+		</script>
+	</head>
+	<body>
+		<div id="hta-loading-screen" class="hta-loading-screen">
+			<div class="hta-loading-screen_logo"></div>
+		</div>
+	</body>
+</html>

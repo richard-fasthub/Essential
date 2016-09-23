@@ -1,0 +1,155 @@
+09/23/2016 11:29:41       Error           An error occured downloading user settings from [usersettingsv5?locale=en-US] in [en-US], System.Exception: Pilot Service: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x54ff62
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x54eeca
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4d0464
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x6b93bb
+09/23/2016 11:29:41       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+09/23/2016 11:29:41       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+09/23/2016 11:29:42       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+09/23/2016 11:29:42       Error           System.Exception: Authentication ticket is null or empty
+   at PilotshubApp!<BaseAddress>+0x553084
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x622b77
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632108
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x632a85
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4ce774
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x50c81a
+   at PilotshubApp!<BaseAddress>+0x67d06f
+   at PilotshubApp!<BaseAddress>+0x67d310
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at SharedLibrary!<BaseAddress>+0x4511ee
+   at SharedLibrary!<BaseAddress>+0x451168
+   at SharedLibrary!<BaseAddress>+0x699af7
+   at PilotshubApp!<BaseAddress>+0x4b841c

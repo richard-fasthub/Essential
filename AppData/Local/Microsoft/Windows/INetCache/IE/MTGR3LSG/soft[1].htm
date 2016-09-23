@@ -1,0 +1,1348 @@
+var geoip = {
+			geoip_city_country_code: "TZ",
+			geoip_area_code: "0",
+			geoip_city: "",
+			geoip_city_continent_code: "AF",
+			geoip_city_country_code: "TZ",
+			geoip_city_country_code3: "TZA",
+			geoip_city_country_name: "Tanzania, United Republic of",
+			geoip_country_code: "TZ",
+			geoip_country_code3: "TZA",
+			geoip_country_name: "Tanzania, United Republic of",
+			geoip_dma_code: "0",
+			geoip_latitude: "-6.0000",
+			geoip_longitude: "35.0000",
+			geoip_org: "",
+			geoip_postal_code: "",
+			geoip_region: "",
+			geoip_region_name: ""
+		};
+window.geoip = geoip;
+window.modelData = window.diagnostics.getModel();
+
+var soft = [
+  {
+    'ID': '3',
+    'Name': '7-Zip',
+    'URL': 'http://download.drp.su/soft/7-Zip.exe',
+    'Icon': 'http://download.drp.su/soft/7-Zip.png',
+    'Publisher': 'Igor Pavlov',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '16.02',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKCU\\Software\\7-Zip\\Path',
+    'Keys': '/S',
+    'Category': 'Archiver',
+    'Description': {
+      'en': 'File archiver with a high compression ratio',
+      'ru': 'Файловый архиватор с высокой степенью сжатия'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1001
+  },
+  {
+    'ID': '4',
+    'Name': 'Opera',
+    'URL': 'http://download.drp.su/soft/OperaXP.exe',
+    'Icon': 'http://download.drp.su/soft/OperaXP.png',
+    'Publisher': 'Opera Software',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '35.0.2066.37',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-05-13',
+    'Registry_32': '1HKCU\\Software\\Opera Software\\Last Stable Install Path',
+    'Keys': '-install -silent -launchopera=1 -setdefaultbrowser=1',
+    'Category': 'Browser',
+    'Description': {
+      'en': 'Opera - fast, secure, easy-to-use browser',
+      'ru': 'Opera - быстрый, безопасный и легкий в использовании браузер'
+    },
+    'Targeting': function (data) {
+      return data.os.OSVersion < 6;
+    },
+    'Lang': '',
+    'IsPartner': true,
+    'priority': 10
+  },
+  {
+    'ID': '5',
+    'Name': 'Opera',
+    'URL': 'http://download.drp.su/soft/OperaBlink.exe',
+    'Icon': 'http://download.drp.su/soft/Opera.png',
+    'Publisher': 'Opera Software',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '40.0.2308.54',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-09-20',
+    'Registry_32': '1HKCU\\Software\\Opera Software\\Last Stable Install Path',
+    'Keys': '-install -silent -launchopera=1 -setdefaultbrowser=1',
+    'Category': 'Browser',
+    'Description': {
+      'en': 'Opera - fast, secure, easy-to-use browser',
+      'ru': 'Opera - быстрый, безопасный и легкий в использовании браузер'
+    },
+    'Targeting': function (data) {
+      return data.os.OSVersion >= 6;
+    },
+    'Lang': '',
+    'IsPartner': true,
+    'priority': 11
+  },
+  {
+    'ID': '6',
+    'Name': 'Firefox',
+    'URL': 'http://download.drp.su/soft/Firefox.exe',
+    'Icon': 'http://download.drp.su/soft/Firefox.png',
+    'Publisher': 'Mozilla Corporation',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '48.0',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-08-08',
+    'Registry_32': 'HKLM\\Software\\mozilla.org\\Mozilla\\CurrentVersion',
+    'Keys': '-ms -ira',
+    'Category': 'Browser',
+    'Description': {
+      'en': 'Firefox - browser, committed to you, your privacy and an open Web',
+      'ru': 'Firefox - браузер, преданный вам, вашей приватности и открытому Интернету'
+    },
+    'IsPartner': true,
+    'Lang': '',
+    'priority': 21
+  },
+  {
+    'ID': '7',
+    'Name': 'Yandex.Browser (Russian) + настройки Яндекса',
+    'URL': 'http://download.drp.su/updates/ya-downloader/downloader_browser.exe',
+    'Icon': 'http://download.drp.su/soft/Yandex.png',
+    'Publisher': 'YANDEX LLC',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '49.0.2623.7918',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-05-12',
+    'Registry_32': '1HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\YandexBrowser\\DisplayName',
+    'Keys': '--partner drpsu --distr /quiet /msicl "YABM=y YABROWSER=y YAHOMEPAGE=y YAQSEARCH=y YBSENDSTAT=n ILIGHT=1 VID="306"" --try 10 /log "%temp%\\YaBrInstall.log"',
+    'OfflineKeys': '/quiet /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=y YABROWSER=y YBSENDSTAT=n VID="003""',
+    'Category': 'Browser',
+    'Description': {
+      'en': 'Yandex.Browser – a quick and safe web-browser with active security system Protect!',
+      'ru': 'Яндекс.Браузер - быстрый браузер с технологией активной защиты Protect!'
+    },
+    'IsPartner': true,
+    'Targeting': function (data) {
+      if (window.lang === 'ru') { return true; }
+      var geo = data.geoip.geoip_country_code.toUpperCase();
+      if (geo === 'RU') { return true; }
+      if (geo === 'AZ') { return true; }
+      if (geo === 'AM') { return true; }
+      if (geo === 'BY') { return true; }
+      if (geo === 'KZ') { return true; }
+      if (geo === 'KG') { return true; }
+      if (geo === 'MD') { return true; }
+      if (geo === 'TJ') { return true; }
+      if (geo === 'TM') { return true; }
+      if (geo === 'UZ') { return true; }
+      if (geo === 'UA') { return true; }
+      if (geo === 'GE') { return true; }
+      if (geo === 'AB') { return true; }
+      if (geo === 'OS') { return true; }
+      return false;
+    },
+    'Lang': 'rus',
+    'priority': 31
+  },
+  {
+    'ID': '8',
+    'Name': 'Yandex.Browser (USA)',
+    'URL': 'http://download.drp.su/soft/YandexLiteUSA.exe',
+    'Icon': 'http://download.drp.su/soft/Yandex.png',
+    'Publisher': 'YANDEX LLC',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '50.0.2661.30117',
+    'ReleaseDate': '2016-04-14',
+    'UpdateDate': '2016-07-14',
+    'Registry_32': '1HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\YandexBrowser\\DisplayName',
+    'Keys': '--silent',
+    'OfflineKeys': '--silent',
+    'Category': 'Browser',
+    'Description': {
+      'en': 'Yandex.Browser – a quick and safe web-browser with active security system Protect!',
+      'ru': 'Яндекс.Браузер - быстрый браузер с технологией активной защиты Protect!'
+    },
+    'IsPartner': true,
+    'Targeting': function (data) {
+      if (window.lang !== 'en') { return false; }
+      return data.geoip.geoip_country_code.toUpperCase() === 'US';
+    },
+    'Lang': 'eng',
+    'exitCodes': [0, 1],
+    'priority': 40
+  },
+  {
+    'ID': '9',
+    'Name': 'Yandex.Browser (Turkish) + Yandex settings',
+    'URL': 'http://download.drp.su/updates/ya-downloader/downloader_browser_tr.exe',
+    'Icon': 'http://download.drp.su/soft/Yandex.png',
+    'Publisher': 'YANDEX LLC',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '49.0.2623.7918',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-05-12',
+    'Registry_32': '1HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\YandexBrowser\\DisplayName',
+    'Keys': '--partner drpsu-turk --distr /quiet /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=y YABROWSER=y YBSENDSTAT=n ILIGHT=1 VID="001"" --try 10 /log "%temp%\\YaBrTrInstall.log"',
+    'OfflineKeys': '/quiet /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=y YABROWSER=y YBSENDSTAT=n VID="003""',
+    'Category': 'Browser',
+    'Description': {
+      'en': 'Yandex.Browser – a quick and safe web-browser with active security system Protect!',
+      'ru': 'Яндекс.Браузер - быстрый браузер с технологией активной защиты Protect!'
+    },
+    'IsPartner': true,
+    'Targeting': function (data) {
+      if (window.lang === 'ru') { return false; }
+      return data.geoip.geoip_country_code.toUpperCase() === 'TR';
+    },
+    'Lang': 'rus',
+    'priority': 41
+  },
+  {
+    'ID': '10',
+    'Name': 'Foxit PDF Reader',
+    'URL': 'http://download.drp.su/soft/FoxitReader.exe',
+    'Icon': 'http://download.drp.su/soft/FoxitReader.png',
+    'Publisher': 'Foxit Software Inc.',
+    'Rating': 4,
+    'Checked': false,
+    'Version': '7.3.6.321',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-05-12',
+    'Registry_32': 'HKCU\\Software\\Foxit Software\\Foxit Reader 7.0\\CollectionInfo\\RunCount',
+    'Keys': '-ai1MUD -gm2 -fm0',
+    'Category': 'Viewer',
+    'Description': {
+      'en': 'View, create, annotate, and Print PDF Files',
+      'ru': 'Безопасная программа для чтения и редактирования PDF'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1011
+  },
+  {
+    'ID': '11',
+    'Name': 'Codec Pack',
+    'URL': 'http://download.drp.su/soft/SAMCoDeCs.exe',
+    'Icon': 'http://download.drp.su/soft/SAMCoDeCs.png',
+    'Publisher': 'www.SamLab.ws',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '5.85',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2015-08-18',
+    'Registry_32': 'HKCU\\Software\\SamLab.ws\\SAM CoDeC Pack\\Install_Dir',
+    'Keys': '/S',
+    'Category': 'Viewer',
+    'Description': {
+      'en': 'Codec Pack contains everything you need to play all popular audio and video file formats',
+      'ru': 'Набор кодеков позволит проигрывать любые форматы аудио и видео файлов'
+    },
+    'IsPartner': false,
+    'Lang': '[ru,tt,uk,az,be,uz,hy,ka]',
+    'priority': 1021
+  },
+  {
+    'ID': '12',
+    'Name': 'Skype',
+    'URL': 'http://download.drp.su/soft/Skype.exe',
+    'Icon': 'http://download.drp.su/soft/Skype.png',
+    'Publisher': 'Skype Technologies S.A.',
+    'Rating': 4,
+    'Checked': false,
+    'Version': '7.25.0.106',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-07-07',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{FC965A47-4839-40CA-B618-18F486F042C6}\\DisplayName',
+    'Keys': '/VERYSILENT /NOLAUNCH /NOGOOGLE /NOSTARTUP /NOPLUGINS',
+    'Category': 'Messenger',
+    'Description': {
+      'en': 'Skype keeps the world talking, for free',
+      'ru': 'Skype — бесплатное общение без ограничений'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1031
+  },
+  {
+    'ID': '13',
+    'Name': 'uTorrent',
+    'URL': 'http://download.drp.su/soft/uTorrent.exe',
+    'Icon': 'http://download.drp.su/soft/uTorrent.png',
+    'Publisher': 'BitTorrent, Inc.',
+    'Rating': 4,
+    'Checked': false,
+    'Version': '3.2.3.28705',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2015-08-18',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\uTorrent\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Internet',
+    'Description': {
+      'en': 'Elegant and efficient torrent downloading',
+      'ru': 'Простой, понятный и эффективный торрент-клиент'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1041
+  },
+  {
+    'ID': '14',
+    'Name': 'PotPlayer',
+    'URL': 'http://download.drp.su/soft/PotPlayer.exe',
+    'Icon': 'http://download.drp.su/soft/PotPlayer.png',
+    'Publisher': 'Daum Corp.',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '1.6.62377',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-07-13',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\PotPlayer\\DisplayName',
+    'Keys': '/S /Video-1 /Audio-0 /Sub-1 /Lists-0 /Shortcut-1010110 /AutoPlayVideo-1 /AutoPlayAudio-0 /ImpIni',
+    'Category': 'Player',
+    'Description': {
+      'en': 'Universal multimedia player with integrated codecs',
+      'ru': 'Универсальный медиа проигрыватель со встроенными кодеками'
+    },
+    'IsPartner': false,
+    'Lang': 'rus',
+    'priority': 1051
+  },
+  {
+    'ID': '15',
+    'Name': 'AIMP',
+    'URL': 'http://download.drp.su/soft/AIMP.exe',
+    'Icon': 'http://download.drp.su/soft/AIMP.png',
+    'Publisher': 'Artem Izmaylov',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '4.10.1827',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-08-08',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\AIMP\\DisplayName',
+    'Keys': '/AUTO="%PROGRAMFILES%\\AIMP"',
+    'Category': 'Player',
+    'Description': {
+      'en': 'Simple and high-quality audio player',
+      'ru': 'Простой и качественный аудио плеер'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1061
+  },
+  {
+    'ID': '17',
+    'Name': 'FastStone Image Viewer',
+    'URL': 'http://download.drp.su/soft/FSImage.exe',
+    'Icon': 'http://download.drp.su/soft/FSImage.png',
+    'Publisher': 'FastStone Soft',
+    'Rating': 4,
+    'Checked': false,
+    'Version': '5.9',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-09-21',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\FastStone Image Viewer_is1\\DisplayName',
+    'Keys': '/VERYSILENT /NORESTART',
+    'Category': 'Viewer',
+    'Description': {
+      'en': 'Image browser, converter and editor',
+      'ru': 'Программа для просмотра и редактирования изображений'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1071
+  },
+  {
+    'ID': '18',
+    'Name': 'TeamViewer',
+    'URL': 'http://download.drp.su/soft/TeamViewer.exe',
+    'Icon': 'http://download.drp.su/soft/TeamViewer.png',
+    'Publisher': 'TeamViewer GmbH',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '11.0.65656',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-09-21',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\TeamViewer\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Internet',
+    'Description': {
+      'en': 'Tool for remote support, access and online meeting',
+      'ru': 'Инструмент удалённого доступа и поддержки через интернет'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1081
+  },
+  {
+    'ID': '19',
+    'Name': 'AOMEI Backupper',
+    'URL': 'http://download.drp.su/soft/Backupper.exe',
+    'Icon': 'http://download.drp.su/soft/Backupper.png',
+    'Publisher': 'AOMEI Technology Co., Ltd.',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '3.5.0',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-07-13',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{A83692F5-3E9B-4E95-9E7E-B5DF5536C09F}_is1\\DisplayName',
+    'Keys': '/VERYSILENT /NORESTART',
+    'Category': 'Backup',
+    'Description': {
+      'en': 'The simplest FREE PC backupper',
+      'ru': 'Простой и бесплатный инструмент для создания бэкапов'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1091
+  },
+  {
+    'ID': '20',
+    'Name': 'Adobe Flash Player',
+    'URL': 'http://download.drp.su/soft/FlashPlayer.exe',
+    'Icon': 'http://download.drp.su/soft/FlashPlayer.png',
+    'Publisher': 'Adobe Systems Incorporated',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '23.0.0.162',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-09-14',
+    'Registry_32': 'HKLM\\Software\\MozillaPlugins\\@adobe.com/FlashPlayer\\Description',
+    'Keys': '-y -gm2 -fm0',
+    'Category': 'Viewer',
+    'Description': {
+      'en': 'Adobe Flash Player',
+      'ru': 'Проигрыватель Adobe Flash Player'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1101
+  },
+  {
+    'ID': '26',
+    'Name': 'Yandex.Elements',
+    'URL': 'http://download.drp.su/updates/ya-downloader/downloader_elements.exe',
+    'Icon': 'http://download.drp.su/soft/YandexPack.png',
+    'Publisher': 'YANDEX LLC',
+    'Rating': 4,
+    'Checked': true,
+    'Version': '8.9',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2015-10-26',
+    'Registry_32': '1HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{12f34aee-538c-44d5-b33a-12213b7e0197}\\DisplayName',
+    'Keys': '--partner drpsu --distr /quiet /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=y YABROWSER=n YBSENDSTAT=n VID="002"" --try 10 /log "%temp%\\YaElInstall.log"',
+    'OfflineKeys': '/quiet /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=n YABROWSER=n YBSENDSTAT=n VID="004""',
+    'Category': 'Browser',
+    'IsPartner': true,
+    'Description': {
+      'en': 'Yandex.Elements extensions',
+      'ru': 'Расширение Яндекс.Элементы'
+    },
+    'Targeting': function (data) {
+      var geo = data.geoip.geoip_country_code.toUpperCase();
+      if (!window.isCamaro || window.isOnline) { return false; }
+      if (window.lang === 'ru') { return true; }
+      if (geo === 'RU') { return true; }
+      if (geo === 'AZ') { return true; }
+      if (geo === 'AM') { return true; }
+      if (geo === 'BY') { return true; }
+      if (geo === 'KZ') { return true; }
+      if (geo === 'KG') { return true; }
+      if (geo === 'MD') { return true; }
+      if (geo === 'TJ') { return true; }
+      if (geo === 'TM') { return true; }
+      if (geo === 'UZ') { return true; }
+      if (geo === 'UA') { return true; }
+      if (geo === 'GE') { return true; }
+      if (geo === 'AB') { return true; }
+      if (geo === 'OS') { return true; }
+      return false;
+    },
+    'Lang': 'rus'
+  },
+  {
+    'ID': '27',
+    'Name': 'Yandex.Elements (Turkish)',
+    'URL': 'http://download.drp.su/updates/ya-downloader/downloader_browser_tr.exe',
+    'Icon': 'http://download.drp.su/soft/YandexPack.png',
+    'Publisher': 'YANDEX LLC',
+    'Rating': 4,
+    'Checked': true,
+    'Version': '8.9',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2015-10-26',
+    'Registry_32': '1HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{12f34aee-538c-44d5-b33a-12213b7e0197}\\DisplayName',
+    'Keys': '--partner drpsu-turk --distr /passive /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=y YABROWSER=y YBSENDSTAT=n VID="002"" --try 10 /log "%temp%\\YaBrTrInstall.log"',
+    'OfflineKeys': '/quiet /msicl "YAHOMEPAGE=y YAQSEARCH=y YABM=n YABROWSER=n YBSENDSTAT=n VID="004""',
+    'Category': 'Browser',
+    'IsPartner': true,
+    'Description': {
+      'en': 'Yandex.Elements extensions'
+    },
+    'Targeting': function (data) {
+      if (!window.isCamaro || window.isOnline) { return false; }
+      if (window.lang === 'ru') { return false; }
+      return data.geoip.geoip_country_code.toUpperCase() === 'TR';
+    },
+    'Lang': ''
+  },
+  {
+    'ID': '28',
+    'Name': 'Avast Free Antivirus',
+    'URL': 'http://download.drp.su/soft/AvastAntivirusA.exe',
+    'Icon': 'http://download.drp.su/soft/AvastAntivirus.png',
+    'Publisher': 'Avast',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '12.3.2280',
+    'ReleaseDate': '2016-09-22',
+    'UpdateDate': '2016-09-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\AVAST Software\\Avast\\Version',
+    'Keys': '/silent',
+    'Category': 'Antivirus',
+    'IsPartner': true,
+    'Description': {
+      'en': 'Avast Free Antivirus',
+      'ru': 'Avast Free Antivirus - самый популярный и полностью бесплатный антивирус со всеми необходимым функциями для надежной защиты компьютера и данных'
+    },
+    'Targeting': function (data) {
+      var geo = data.geoip.geoip_country_code.toUpperCase();
+      if (geo === 'RU') { return true; }
+      return false;
+    },
+    'Lang': 'rus',
+    'priority': 1200,
+    'singleOnly': true
+  },
+  {
+    'ID': '29',
+    'Name': 'WinRAR (English)',
+    'URL': 'http://download.drp.su/soft/WinRARx86Eng.exe',
+    'Icon': 'http://download.drp.su/soft/WinRAR.png',
+    'Publisher': 'Alexander Roshal',
+    'Rating': 4,
+    'Checked': true,
+    'Version': '5.30',
+    'ReleaseDate': '2015-12-01',
+    'UpdateDate': '2015-12-01',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\WinRAR archiver\\DisplayName',
+    'Keys': '/S',
+    'Targeting': function (data) {
+      if (window.lang !== 'ru' &&
+          window.lang !== 'az' &&
+          window.lang !== 'be' &&
+          window.lang !== 'hy' &&
+          window.lang !== 'tt' &&
+          window.lang !== 'uk' &&
+          window.lang !== 'uz' &&
+          window.lang !== 'pt') { return true; }
+      return false;
+    },
+    'Category': 'Archiver',
+    'Description': {
+      'en': 'Powerful archive manager',
+      'ru': 'Мощная программа для создания и управления архивами'
+    },
+    'IsPartner': true,
+    'Lang': 'eng',
+    'priority': 71
+  },
+  {
+    'ID': '30',
+    'Name': 'WinRAR (Russian)',
+    'URL': 'http://download.drp.su/soft/WinRARx86Rus.exe',
+    'Icon': 'http://download.drp.su/soft/WinRAR.png',
+    'Publisher': 'Alexander Roshal',
+    'Rating': 4,
+    'Checked': true,
+    'Version': '5.30',
+    'ReleaseDate': '2015-12-01',
+    'UpdateDate': '2016-05-12',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\WinRAR archiver\\DisplayName',
+    'Keys': '/S',
+    'Targeting': function (data) {
+      if (window.lang === 'ru') { return true; }
+      if (window.lang === 'az') { return true; }
+      if (window.lang === 'be') { return true; }
+      if (window.lang === 'hy') { return true; }
+      if (window.lang === 'tt') { return true; }
+      if (window.lang === 'uk') { return true; }
+      if (window.lang === 'uz') { return true; }
+      return false;
+    },
+    'Category': 'Archiver',
+    'Description': {
+      'en': 'Powerful archive manager',
+      'ru': 'Мощная программа для создания и управления архивами'
+    },
+    'IsPartner': true,
+    'Lang': 'rus',
+    'priority': 81
+  },
+  {
+    'ID': '31',
+    'Name': 'WinRAR (Portuguese)',
+    'URL': 'http://download.drp.su/soft/WinRARx86Br.exe',
+    'Icon': 'http://download.drp.su/soft/WinRAR.png',
+    'Publisher': 'Alexander Roshal',
+    'Rating': 4,
+    'Checked': true,
+    'Version': '5.30',
+    'ReleaseDate': '2015-12-01',
+    'UpdateDate': '2016-05-12',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\WinRAR archiver\\DisplayName',
+    'Keys': '/S',
+    'Targeting': function (data) {
+      if (window.lang === 'pt') { return true; }
+      return false;
+    },
+    'Category': 'Archiver',
+    'Description': {
+      'en': 'Powerful archive manager',
+      'ru': 'Мощная программа для создания и управления архивами'
+    },
+    'IsPartner': true,
+    'Lang': 'pt',
+    'priority': 91
+  },
+  {
+    'ID': '40',
+    'Name': '360 Total Security (Russian)',
+    'URL': 'http://download.drp.su/soft/360tsRU_full.exe',
+    'Icon': 'http://download.drp.su/soft/360ts.png',
+    'Publisher': 'Qihu 360 Software Co., Ltd.',
+    'Rating': 5,
+    'Checked': function (data) {
+      if (data.antivirus && data.antivirus.hasAntiviruses()) { return false; }
+      return true;
+    },
+    'Version': '8.8.0.1057',
+    'ReleaseDate': '2016-01-19',
+    'UpdateDate': '2016-09-09',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\360TotalSecurity\\DisplayName',
+    'Keys': '/S',
+    'Targeting': function (data) {
+      var geo = (data.geoip && data.geoip.geoip_country_code) ? data.geoip.geoip_country_code.toUpperCase() : 'unknown';
+
+      if (geo === 'RU') { return true; }
+
+      if (window.lang === 'ru' &&
+        geo !== 'TR'
+      ) { return true; }
+
+      return false;
+    },
+    'Category': 'Antivirus',
+    'Description': {
+      'en': 'Free antivirus and system optimization utility',
+      'ru': 'Бесплатный антивирус и инструмент оптимизации компьютера'
+    },
+    'IsPartner': true,
+    'Lang': 'rus',
+    'priority': 1201,
+    'exitCodes': [0, 1],
+    'singleOnly': true
+  },
+  {
+    'ID': '43',
+    'Name': '360 Total Security',
+    'URL': 'http://download.drp.su/soft/360tsCIS_full.exe',
+    'Icon': 'http://download.drp.su/soft/360ts.png',
+    'Publisher': 'Qihu 360 Software Co., Ltd.',
+    'Rating': 5,
+    'Checked': function (data) {
+      if (data.antivirus && data.antivirus.hasAntiviruses()) { return false; }
+      return true;
+    },
+    'Version': '8.8.0.1057',
+    'ReleaseDate': '2016-01-19',
+    'UpdateDate': '2016-09-09',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\360TotalSecurity\\DisplayName',
+    'Keys': '/S',
+    'Targeting': function (data) {
+      var geo = (data.geoip && data.geoip.geoip_country_code) ? data.geoip.geoip_country_code.toUpperCase() : 'unknown';
+
+      if (geo === 'AZ' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'AM' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'BY' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'KZ' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'KG' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'MD' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'TJ' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'TM' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'UZ' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'UA' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'GE' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'AB' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'OS' &&
+        window.lang !== 'ru'
+      ) { return true; }
+      if (geo === 'MN' &&
+        window.lang !== 'ru'
+      ) { return true; }
+
+      if ((
+        // Ukraine
+        window.lang === 'uk' ||
+        // Belarus
+        window.lang === 'be' ||
+        // Armenian
+        window.lang === 'hy' ||
+        // Georgian
+        window.lang === 'ka' ||
+        // Tatar
+        window.lang === 'tt' ||
+        // Uzbek
+        window.lang === 'uz'
+      ) &&
+        geo !== 'TR' &&
+        geo !== 'RU'
+      ) { return true; }
+
+      return false;
+    },
+    'Category': 'Antivirus',
+    'Description': {
+      'en': 'Free antivirus and system optimization utility',
+      'ru': 'Бесплатный антивирус и инструмент оптимизации компьютера'
+    },
+    'IsPartner': true,
+    'Lang': '',
+    'priority': 1221,
+    'exitCodes': [0, 1],
+    'singleOnly': true
+  },
+  {
+    'ID': '69',
+    'Name': 'DriverPack Notifier',
+    'URL': 'http://download.drp.su/soft/DriverPack-Notifier.exe',
+    'Icon': 'http://download.drp.su/soft/DriverPack.png',
+    'Publisher': 'DriverPack',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '2.0',
+    'ReleaseDate': '2015-10-08',
+    'UpdateDate': '2015-12-18',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\DriverPack Notifier\\DisplayName',
+    'Keys': '',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'DriverPack Notifier monitors your PC health and drivers relevance',
+      'ru': 'DriverPack Notifier проверяет состояние компьютера и актуальность драйверов'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 2
+  },
+  {
+    'ID': '71',
+    'Name': 'DirectX 9.0c',
+    'URL': 'http://download.drp.su/soft/DirectX.exe',
+    'Icon': 'http://download.drp.su/soft/DirectX.png',
+    'Publisher': 'Microsoft Corporation',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '9.0c',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-02-03',
+    'Keys': '',
+    'Targeting': function (data) {
+      if (data.system.fso.FileExists(data.system.WshShell.ExpandEnvironmentStrings('%windir%\\Microsoft.NET\\DirectX for Managed Code\\1.0.2911.0\\Microsoft.DirectX.Direct3DX.dll'))) { return false; }
+      return true;
+    },
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'DirectX lets you to run old games on your pc',
+      'ru': 'Набор файлов, необходимый для запуска старых игр'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'priority': 1131,
+    'exitCodes': [0, 2]
+  },
+  {
+    'ID': '72',
+    'Name': 'Microsoft Visual C++',
+    'URL': 'http://download.drp.su/soft/VisualCplus.exe',
+    'Icon': 'http://download.drp.su/soft/VisualCplus.png',
+    'Publisher': 'Microsoft Corporation',
+    'Rating': 5,
+    'Checked': false,
+    'Version': '2005-2015',
+    'ReleaseDate': '2014-07-30',
+    'UpdateDate': '2016-07-07',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0C3E5D1-1ADE-321E-8167-68EF0DE699A5}\\DisplayName',
+    'Keys': '',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Microsoft Visual C++ packages are needed for proper work of some programs',
+      'ru': 'Набор файлов для корректной работы некоторых программ'
+    },
+    'IsPartner': false,
+    'Lang': '',
+    'singleOnly': true,
+    'priority': 1,
+    'installTimeout': 1800000,
+    'bits': true
+  },
+  {
+    'ID': '73',
+    'Name': 'System Libraries',
+    'URL': 'http://download.drp.su/soft/RuntimePack.exe',
+    'Icon': 'http://download.drp.su/soft/RuntimePack.png',
+    'Publisher': 'Microsoft Corporation',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '15.7.22',
+    'ReleaseDate': '2015-12-07',
+    'UpdateDate': '2016-02-03',
+    'Registry_32': '',
+    'Keys': '-y -gm2 -fm0',
+    'Targeting': function (data) {
+      if (data.system.fso.FileExists(data.system.WshShell.ExpandEnvironmentStrings('%windir%\\System\\Vbrun300.dll'))) { return false; }
+      return true;
+    },
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'System Libraries are needed for proper work of some drivers',
+      'ru': 'Набор системных библиотек для корректной работы некоторых драйверов'
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 1141
+  },
+  {
+    'ID': '74',
+    'Name': '.NET Framework',
+    'URL': 'http://download.drp.su/soft/DotNet.exe',
+    'Icon': 'http://download.drp.su/soft/DotNet.png',
+    'Publisher': 'Microsoft Corporation',
+    'Rating': 5,
+    'Checked': true,
+    'Version': '4.6.1 HotFix 2',
+    'ReleaseDate': '2015-12-07',
+    'UpdateDate': '2016-07-07',
+    'Registry_32': 'HKCU\\Software\\DRP\\.NET Framework\\NT-Version',
+    'Keys': '',
+    'Category': 'Drivers',
+    'Description': {
+      'en': '.Net Framework is needed for proper work of some programs',
+      'ru': '.Net Framework необходим для запуска некоторых программ'
+    },
+    'Targeting': function (data) {
+      return data.os.OSVersion >= 6;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 1151,
+    'bits': true
+  },
+  {
+    'ID': '75',
+    'Name': '.NET Framework',
+    'URL': 'http://download.drp.su/soft/DotNetXP.exe',
+    'Checked': true,
+    'Version': '1.1-4.0',
+    'ReleaseDate': '2015-12-07',
+    'UpdateDate': '2016-07-07',
+    'Registry_32': 'HKCU\\Software\\DRP\\.NET Framework\\XP-Version',
+    'Keys': '',
+    'Category': 'Drivers',
+    'Description': {
+      'en': '.Net Framework is needed for proper work of some programs',
+      'ru': '.Net Framework необходим для корректной работы некоторых программ'
+    },
+    'Targeting': function (data) {
+      return data.os.OSVersion < 6;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 1161,
+    'bits': true
+  },
+  {
+    'ID': '900',
+    'Name': 'Acer Tools for Windows XP',
+    'URL': 'http://download.drp.su/tools/AcerXP.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0D9378C-CFA3-4503-A562-5350BE6E05C2}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Acer'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /acer/i.test(vendor) && osVersion === 5.1;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '901',
+    'Name': 'Acer Tools for Windows Vista',
+    'URL': 'http://download.drp.su/tools/Acer6.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0D9378C-CFA3-4503-A562-5350BE6E05C2}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Acer'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /acer/i.test(vendor) && osVersion === 6.0;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '902',
+    'Name': 'Acer Tools for Windows 7',
+    'URL': 'http://download.drp.su/tools/Acer7.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0D9378C-CFA3-4503-A562-5350BE6E05C2}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Acer'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /acer/i.test(vendor) && osVersion === 6.1;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '903',
+    'Name': 'Acer Tools for Windows 8',
+    'URL': 'http://download.drp.su/tools/Acer8.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0D9378C-CFA3-4503-A562-5350BE6E05C2}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Acer'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /acer/i.test(vendor) && osVersion === 6.2;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '904',
+    'Name': 'Acer Tools for Windows 8.1',
+    'URL': 'http://download.drp.su/tools/Acer81.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{F0D9378C-CFA3-4503-A562-5350BE6E05C2}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Acer'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /acer/i.test(vendor) && osVersion === 6.3;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '910',
+    'Name': 'Asus Tools for Windows XP',
+    'URL': 'http://download.drp.su/tools/AsusXP.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AB5C933E-5C7D-4D30-B314-9C83A49B94BE}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Asus'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /asus/i.test(vendor) && osVersion === 5.1;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '912',
+    'Name': 'Asus Tools for Windows 7',
+    'URL': 'http://download.drp.su/tools/Asus7.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AB5C933E-5C7D-4D30-B314-9C83A49B94BE}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Asus'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /asus/i.test(vendor) && osVersion === 6.1;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '913',
+    'Name': 'Asus Tools for Windows 8',
+    'URL': 'http://download.drp.su/tools/Asus8.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AB5C933E-5C7D-4D30-B314-9C83A49B94BE}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Asus'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /asus/i.test(vendor) && osVersion === 6.2;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '914',
+    'Name': 'Asus Tools for Windows 8.1',
+    'URL': 'http://download.drp.su/tools/Asus81.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AB5C933E-5C7D-4D30-B314-9C83A49B94BE}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Asus'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /asus/i.test(vendor) && osVersion === 6.3;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '915',
+    'Name': 'Asus Tools for Windows 10',
+    'URL': 'http://download.drp.su/tools/Asus10.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{AB5C933E-5C7D-4D30-B314-9C83A49B94BE}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Asus'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /asus/i.test(vendor) && osVersion === 10.0;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '930',
+    'Name': 'Dell Tools for Windows 7',
+    'URL': 'http://download.drp.su/tools/Dell7.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{87CF757E-C1F1-4D22-865C-00C6950B5258}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Dell'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /dell/i.test(vendor) && osVersion === 6.1;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '931',
+    'Name': 'Dell Tools for Windows 8.1',
+    'URL': 'http://download.drp.su/tools/Dell81.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{87CF757E-C1F1-4D22-865C-00C6950B5258}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Dell'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /dell/i.test(vendor) && osVersion === 6.3;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '932',
+    'Name': 'Dell Tools for Windows 10',
+    'URL': 'http://download.drp.su/tools/Dell10.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{87CF757E-C1F1-4D22-865C-00C6950B5258}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от Dell'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /dell/i.test(vendor) && osVersion === 10.0;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '960',
+    'Name': 'HP Tools for Windows 7-10',
+    'URL': 'http://download.drp.su/tools/HPNT.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{09D0DB68-90EA-4015-983E-A0BD777D5A02}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от HP'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      var osVersion = data.os.OSVersion;
+      return /notebook/i.test(type) && /hp/i.test(vendor) && osVersion >= 6.0;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '965',
+    'Name': 'MSI Tools for Windows x86',
+    'URL': 'http://download.drp.su/tools/MSIx86.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{8B57FEA1-ABC0-4469-9205-856FD0D97C40}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от MSI'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      return /notebook/i.test(type) && /msi/i.test(vendor) && !data.os.is64;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '966',
+    'Name': 'MSI Tools for Windows x64',
+    'URL': 'http://download.drp.su/tools/MSIx64.exe',
+    'Checked': true,
+    'Version': '1.0',
+    'ReleaseDate': '2016-06-22',
+    'UpdateDate': '2016-06-22',
+    'Registry_32': 'HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{8B57FEA1-ABC0-4469-9205-856FD0D97C40}\\DisplayName',
+    'Keys': '/S',
+    'Category': 'Drivers',
+    'Description': {
+      'en': 'Driver Utilities',
+      'ru': 'Драйверные утилиты от MSI'
+    },
+    'Targeting': function (data) {
+      var type = window.modelData.type;
+      var vendor = window.modelData.vendor;
+      return /notebook/i.test(type) && /msi/i.test(vendor) && data.os.is64;
+    },
+    'Lang': '',
+    'IsPartner': false,
+    'priority': 9999
+  },
+  {
+    'ID': '1004',
+    'Name': 'Nero TuneItUp',
+    'URL': 'http://download.drp.su/soft/NeroTuneItUp.exe',
+    'Icon': 'http://download.drp.su/soft/NeroTuneItUp.png',
+    'Publisher': 'Nero',
+    'Rating': 4,
+    'Checked': false,
+    'Version': '2.4.6',
+    'ReleaseDate': '2016-09-20',
+    'UpdateDate': '2016-09-20',
+    'Registry_32': 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Nero_tuneitup_is1\\DisplayName',
+    'Keys': '',
+    'Targeting': function (data) {
+      var geo = data.geoip.geoip_country_code.toUpperCase();
+      if (geo === 'US') { return true; }
+      if (geo === 'CA') { return true; }
+      if (geo === 'AU') { return true; }
+      if (geo === 'CH') { return true; }
+      if (geo === 'JP') { return true; }
+      if (geo === 'DE') { return true; }
+      if (geo === 'FR') { return true; }
+      if (geo === 'GB') { return true; }
+      if (geo === 'IT') { return true; }
+      if (geo === 'BR') { return true; }
+      if (geo === 'NL') { return true; }
+      if (geo === 'ES') { return true; }
+      return false;
+    },
+    'Category': 'System',
+    'Description': {
+      'en': 'Cleaning, optimization and acceleration of computer on professional level!',
+      'ru': 'Cleaning, optimization and acceleration of computer on professional level!'
+    },
+    'IsPartner': true,
+    'Lang': 'en',
+    'priority': 10004
+  }
+];
+
+for (var i = 0; i < soft.length; i++) {
+  soft[i].CheckedDefaultIf = soft[i].Targeting;
+  if (typeof soft[i].Checked === 'boolean') {
+    soft[i].CheckedDefault = soft[i].Checked;
+  } else {
+    soft[i].CheckedDefault = false;
+  }
+}
+
+window.SoftPack.jsonCallback(soft);

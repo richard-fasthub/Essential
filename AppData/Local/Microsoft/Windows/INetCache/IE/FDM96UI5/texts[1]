@@ -1,0 +1,20 @@
+
+
+
+IDS_REMAINING = "Registry Errors Remaining"
+IDS_REGDAMAGELEVEL = "Registry Damage Level:"
+IDS_REG_REM = "Registry errors remaining on your system may cause slow system performance, decreased startup speeds and unwanted program errors."
+IDS_DAM_LEV = "Damage Level"
+IDS_ISS_REM = " issues remaining"
+IDS_LOW = "Low"
+IDS_MODERATE = "Moderate"
+IDS_HIGH = "High"
+IDS_TOFIX = "To fix the pending "
+IDS_ERRORSLEFT = " registry errors left in your system, click "
+IDS_REGISTERNOW = " Register Now"
+IDS_MONEYBACK = "Improved System Performance, or your money back!"
+IDS_HELP = "Advanced Driver Updater will help in enhancing and improving your system’s performance by cleaning all missing,<br /> unwanted, obsolete and corrupt registry entries."
+IDS_BUY = "BUY IN CONFIDENCE"
+IDS_REASON = " If, for any reason, you are not satisfied with your product, contact us within 30 days of the product purchase date, and we will refund your purchase."
+IDS_ALR_REG = "Already Registered?"
+

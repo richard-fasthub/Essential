@@ -1,0 +1,143 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<style>
+  body{
+    font-family: 'Segoe UI';
+    color: windowtext;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  li {
+    margin-top: 7px;
+  }
+  th{
+    font-size: 70%;
+    font-family: 'Segoe UI';
+    vertical-align: top;
+    text-align: left;
+    padding-left: 2px;
+  }
+  .link{
+    cursor: hand;
+    text-decoration: underline;
+    font-size: 75%;
+  }
+  .bluelink{
+    cursor: hand;
+    text-decoration: underline;
+    color: blue;
+  }
+  .content{
+    width: 100%;
+    border-top: 'none';
+    color: black;
+  }
+  .control{
+    FONT-FAMILY: 'Segoe UI';
+    FONT-SIZE: 4pt;
+    width: 25%;
+    background: threedface;
+    border: solid 1px gray;
+  }
+  .title-bar{
+    margin-top: 10px;
+    border: solid gray 1px;
+    width: 100%;
+    padding: 3px;
+    font-size: 78%;
+    vertical-align: middle;
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr='buttonhighlight',EndColorStr='threedshadow');
+  }
+  .info{ font-size: 75%; }
+</style>
+</head>
+<script language="vbscript">
+
+dim url
+
+sub window_onload()
+
+  dim Text
+
+  Text = location.search
+
+  Text = Right(Text, Len(Text) - 1)
+  url = Text
+
+end sub
+
+</script>
+
+<body>
+  <div class="title-bar" id="title" id="titleOverview">Overview of Performance Monitor</div>
+  <div style="min-height: 110px; overflow-y: scroll;">
+    <table class="content" style="background: threedface" cellpadding="7px">
+      <tr>
+        <td valign="top" width="32px">
+          <a class="bluelink" onclick="open(Url)">
+            <img src="res://wdc.dll/perfmon.gif"/>
+          </a>
+        </td>
+        <td class="info">
+          <div id="textDescription">
+            You can use Performance Monitor to view performance data either in real time or from a log file.
+            Create Data Collector Sets to configure and schedule performance counter, event trace, and
+            configuration data collection so that you can analyze the results and view reports.
+            <br/><br/>
+            To begin, expand Monitoring Tools and click Performance Monitor, or expand Data Collector Sets or Reports.
+            <br/><br/>
+            The new Resource Monitor lets you view detailed real-time information about hardware
+            resources (CPU, disk, network, and memory) and system resources (including handles and modules) in use
+            by the operating system, services, and running applications. In addition, you can use Resource Monitor
+            to stop processes, start and stop services, analyze process deadlocks, view thread wait chains, and identify
+            processes locking files.
+          </div>
+          <br/>
+          <div id="resmonLink"><a class="bluelink" onclick="open(Url)">Open Resource Monitor</a></div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="title-bar" id="title">System Summary</div>
+  <table class="content" style="background: threedface" cellspacing="10px">
+    <tr>
+      <td height="290px" class="control">
+        <object width="100%" height="100%" id="Report" classid="CLSID:C4D2D8E0-D1DD-11CE-940F-008029004347">
+          <param name="_Version" value="393219" />
+          <param name="DisplayType" value="3"/>
+          <param name="ShowLegend" value="0"/>
+          <param name="ShowToolbar" value="0"/>
+          <param name="ShowValueBar" value="0"/>
+          <param name="ReadOnly" value="1"/>
+          <param name="ShowScaleLabels" value="1"/>
+          <param name="TimeAxisLabels" value="0"/>
+          <param name="BackColor" value="-2147483643"/>
+          <param name="WrapTimeLine" value="1"/>
+          <param name="AmbientFont" value="0"/>
+          <param name="FontName" value="Segoe UI"/>
+          <param name="FontSize" value="8"/>
+          <param name="FontItalic" value="0"/>
+          <param name="FontUnderline" value="0"/>
+          <param name="FontStrikethrough" value="0"/>
+          <param name="FontWeight" value="100"/>
+          <param name="CounterCount" value="10" />
+          <param name="Counter00001.Path" value="\Processor Information(*)\% Processor Time"/>
+          <param name="Counter00002.Path" value="\Processor Information(*)\% Interrupt Time"/>
+          <param name="Counter00003.Path" value="\Processor Information(*)\Parking Status"/>
+          <param name="Counter00004.Path" value="\Memory\Available MBytes"/>
+          <param name="Counter00005.Path" value="\Memory\% Committed Bytes In Use" />
+          <param name="Counter00006.Path" value="\Memory\Cache Faults/sec" />
+          <param name="Counter00007.Path" value="\Memory\Cache Faults/sec" />
+          <param name="Counter00008.Path" value="\PhysicalDisk(*)\% Idle Time"/>
+          <param name="Counter00009.Path" value="\PhysicalDisk(*)\Avg. Disk Queue Length" />
+          <param name="Counter00010.Path" value="\Network Interface(*)\Bytes Total/sec"/>
+        </object>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+

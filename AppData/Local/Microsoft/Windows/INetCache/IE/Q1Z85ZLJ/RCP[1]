@@ -1,0 +1,170 @@
+.GreyHeadingText{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#000000}
+.GreenHeadingTextUpdated{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#006400;}
+
+.BlackSmallBoldText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909; font-weight:bold;}
+.GreenSmallBoldText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#156d00; font-weight:bold;}
+.RedSmallBoldText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#d14836; font-weight:bold;}
+.DateTimeClass{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909;}
+.DateTimeClassit{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#090909;}
+
+.DateTimeClassBold{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909;font-weight:bold;}
+.DateTimeClassBoldit{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#090909;font-weight:bold;}
+
+
+.RedSmallText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#d14836; line-height:16px;}
+.GreenTextSmall{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#156d00; line-height:16px;}
+.SmallLinkText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#0000ff; text-decoration:underline; cursor:hand; cursor:pointer;}
+.SmallLinkTextBold{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#0000ff; text-decoration:underline; cursor:hand; cursor:pointer;font-weight:bold;}
+
+.DamageLevelBlackText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#090909;}
+.DamageLevelBlackText12{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909;}
+.BlackCheckText14{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#090909;}
+.BlackCheckText14Bold{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#090909;font-weight:bold;}
+.BlackCheckText{font-family:segoe UI, Arial, tahoma; font-size:15px; color:#090909;}
+.BlacknText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909;text-decoration:none;}
+.BlacknTextBold{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909;}
+.BlueTextHL{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#0000ff; text-decoration:underline; cursor:hand;}
+.BlueTextHLBold{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#0000ff; text-decoration:underline; cursor:hand;font-weight:bold;}
+.BtnWhiteText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#ffffff; font-weight:bold;}
+.BtnDisableText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#b1b1b1; font-weight:bold;}
+.BtnBlackText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#000000; font-weight:bold;}
+.BtnBlackText11{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#546372; }
+.BtnBlackTextru{font-family:segoe UI, Arial, tahoma; font-size:10px; color:#546372; }
+.BtnBlackTextSR{font-family:Tahoma; font-size:11px; color:#000000; font-weight:bold;}
+.btnBlackTextNew{font-family:Verdana; font-size:11px; color:#000000;font-weight: bold;}
+
+.ProgressPathText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#434343;}
+.BlacknTextDisable{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#a4a4a4;}
+.SectionHeading{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#090909;}
+
+.SectionHeadingBold{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#090909;font-weight:bold;}
+.SectionHeadingDisable{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#a4a4a4;}
+.ErrorRedText14{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#d14836; font-weight:bold;}
+.ErrorRedText{font-family:segoe UI, Arial, tahoma; font-size:17px; color:#d14836; font-weight:bold;}
+.ErrorRedTextDisabled{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#d14836; font-weight:bold;}
+.AttentionText{font-family:segoe UI, Arial, tahoma; font-size:20px; color:#ffffff; }
+
+.AttentionTextBold{font-family:segoe UI, Arial, tahoma; font-size:20px; color:#ffffff; font-weight:bold;}
+
+.AttentionTextBoldSmall{font-family:segoe UI, Arial, tahoma; font-size:15px; color:#ffffff; font-weight:bold;}
+
+.ErrorWhiteText{font-family:segoe UI, Arial, tahoma; font-size:23px; color:#ffffff;}
+.TotalErrorText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#4d4d4d; font-weight:bold;}
+.FixErrorLink{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#0000ff;text-decoration:underline; cursor:hand; cursor:pointer;}
+
+.InnerRowTxt{font-weight: bold;font-size: 11px;color: #525252;font-family: Tahoma;}
+.Error{font-family:Verdana; font-size:12px; color:#d4100f;font-weight: bold;}
+.ErrorLargeText{font-family:Verdana; font-size:23px; color:#d4100f;font-weight: bold;}
+
+.PartiallyCleanText{font-family:segoe UI, Arial, tahoma; font-size:20px; color:#090909;font-weight: bold;}
+.PartiallyCleanTextSmall{font-family:segoe UI, Arial, tahoma; font-size:16px; color:#090909;font-weight: bold;}
+.DamageLevelText{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#9f121d;font-weight: bold;}
+.PartiallyCleanRedSmallText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#d14836;}
+.PartiallyCleanSmallLink{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#0000ff; text-decoration:underline; cursor:hand; cursor:pointer;}
+.PartiallyCleanSmallLinkbig{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#0000ff; text-decoration:underline; cursor:hand; cursor:pointer;}
+
+.DamageLevel{font-family:Tahoma; font-size:12px; color:#090909;font-weight: bold;}
+
+.Popup1ErrorNew{font-family:segoe UI, Arial, tahoma; font-size:18px; color:#090909; font-weight:bold;}
+.Popup1ErrorText{font-family:segoe UI, Arial, tahoma; font-size:22px; color:#090909;}
+.Popup1RedText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#d14836;}
+.Popup1OrangeText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#ee8500;}
+.Popup1WhiteText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#ffffff;}
+.Popup1WhiteTextLink{font-family:tahoma, Arial ; font-size:11px; font-weight:bold; color:#ffffff;text-decoration:underline; cursor:hand; cursor:pointer;}
+.Popup1BlackText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#000000;}
+.Popup1BlueTextLink{font-family:tahoma, Arial ; font-size:11px; font-weight:bold; color:#4A4794;text-decoration:underline; cursor:hand; cursor:pointer;}
+.Popup2ErrorText{font-family:Tahoma; font-size:13px; color:#090909;font-weight: bold;}
+.Popup2BlackTextLink{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#090909;text-decoration:underline; cursor:hand; cursor:pointer;}
+
+.Popup3GreyText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#484848; line-height:16px;}
+.Popup3BlueText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#0000ff;text-decoration:underline; cursor:hand; cursor:pointer;}
+.Popup3GreenText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#3f8f4e;}
+.Popup3YellowText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#ffea00;}
+
+.RedText{font-family:segoe UI, Arial, tahoma; font-size:27px; color:#ff6600; font-weight:bold;}
+.GreenText{font-family:segoe UI, Arial, tahoma; font-size:27px; color:#156d00; font-weight:bold;}
+.YellowText{font-family:segoe UI, Arial, tahoma; font-size:27px; color:#fd8606; font-weight:bold;}
+
+.UpgradeBtntextSmall{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#fff;font-weight:bold;text-shadow: 11px 11px #606060, 1px 1px #606060}
+.UpgradeBtntext{font-family:segoe UI, Arial, tahoma; font-size:18px; color:#fff;font-weight:bold;text-shadow: 1px 1px #606060, 1px 1px #606060}
+.UpgradeBtntextSmallnl{font-family:segoe UI, Arial, tahoma; font-size:15px; color:#fff;font-weight:bold;text-shadow: 1px 1px #606060, 1px 1px #606060}
+.StartScanBtnText{font-family:segoe UI, Arial, tahoma; font-size:22px; color:#ffffff;font-weight:bold;text-shadow: 1px 1px #044d7d, 1px 1px #044d7d}
+.StartScanBtnTextSmall{font-family:segoe UI, Arial, tahoma; font-size:16px; color:#fff;font-weight:bold;text-shadow: 1px 1px #044d7d, 1px 1px #044d7d;}
+.StartScanBtnTextSmallsv{font-family:segoe UI, Arial, tahoma; font-size:15px; color:#fff;font-weight:bold;text-shadow: 1px 1px #044d7d, 1px 1px #044d7d;}
+.LastScanTextSmall{font-family:segoe UI, Arial, tahoma; font-size:12px;  font-weight:bold;}				
+.LastScanTextSmallpt{font-family:segoe UI, Arial, tahoma; font-size:11px;  font-weight:bold;}				
+.LastScanText{font-family:segoe UI, Arial, tahoma; font-size:14px;  font-weight:bold;}
+.LastScanStatusText{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#aa2c2c; font-weight:bold;}
+.LastScanStatusTextSmall{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#aa2c2c; font-weight:bold;}
+.LastScanStatusTextGreen{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#156d00; font-weight:bold;}
+
+.RedSmallBoldText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#d14836; font-weight:bold;}
+.RedSmallBoldTextit{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#d14836; font-weight:bold;}
+.RecActionLink{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#0012ff; text-decoration:underline;cursor:hand;cursor:pointer;}
+.RecActionLinkBold{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#0012ff; text-decoration:underline;cursor:hand;cursor:pointer; font-weight:bold;}
+
+.RecActionText{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#cd1212; font-weight:bold;}
+.PhoneNumberText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#424242;}
+.FinishFrameHeading{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#090909;font-weight:bold;}
+
+.DivPinkBgClass{float:left; display:inline; width:708px; background-color:#fff1f1;}
+.DivGrayBgClass{float:left; display:inline; width:708px; background-color:#f5f5f5;}
+.ErrorBlackText{font-family:segoe UI, Arial, tahoma; font-size:17px; color:#000000; font-weight:bold;}
+.ErrorBlack{font-family:Verdana; font-size:12px; color:#000000;font-weight: bold;}
+.UpgradeFullVersionSmall{font-family:segoe UI, Arial, tahoma; font-size:21px; color:#2b2b2b;} 
+.UpgradeFullVersion{font-family:segoe UI, Arial, tahoma; font-size:26px; color:#2b2b2b;} 
+.FasterPC{font-family:segoe UI, Arial, tahoma; font-size:17px; color:#074a02;}
+.FasterPCSmall{font-family:segoe UI, Arial, tahoma; font-size:16px; color:#074a02;}
+
+
+.Call{font-family:segoe UI, Arial, tahoma; font-size:12px; color:#6c6c6c;}
+.subscriptionExpireSmall{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#000000;font-weight:bold;}
+.subscriptionExpire{font-family:segoe UI, Arial, tahoma; font-size:18px; color:#000000;}
+.power{font-family:segoe UI, Arial, tahoma; font-size:18px; color:#000000; font-weight:bold;}
+.smallBlackText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#000000; font-weight:bold;}
+.smallBlackTextNormal{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#000000; font-weight:normal;}
+.smallGreyText{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#6c6c6c;}
+.installed{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#0a7046;}
+.DownloadNow{font-family:segoe UI, Arial, tahoma; font-size:11px; color:#0000ff; text-decoration:underline; cursor:hand; cursor:pointer;}
+
+.FullVersion{font-family:segoe UI, Arial, tahoma; font-size:21px; color:#2b2b2b;}
+.AutomaticText{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#424242;}
+.LinkedText{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#0000ff; text-decoration:underline;cursor:hand;cursor:pointer;}
+.UptoDateText{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#424243;}	
+.CallSmallText{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#424244;}
+.LinkedNum{font-family:segoe UI, Arial, tahoma; font-size:13px; color:#424244; font-weight:bold; text-decoration:underline;}
+
+
+
+
+.BlackNormalBigText{font-family:Verdana; font-size:13px; color:#000000}
+
+.BtnNormalText{font-family: verdana;font-size: 18px;color: #ffffff;font-weight:bold;}	
+.WhiteLargeText{font-family:segoe UI, Arial, tahoma; font-size:46px; color:#fffef8;}
+.listHeading{font-family:Verdana; font-size:13px; color:#000000;font-weight: bold;}
+.BlackNormalSmallText{font-family:Verdana; font-size:10px; color:#000000}
+
+
+.tooltip{font-size: 12px;color: #ffFFFF;font-family: Arial;}
+.RedSmallTextNewVerySmall{font-family:segoe UI, Arial, tahoma; font-size:14px; color:#d14836; font-weight:bold;}
+.RedSmallTextNewSmall{font-family:segoe UI, Arial, tahoma; font-size:18px; color:#d14836; font-weight:bold;}
+.RedSmallTextNew{font-family:segoe UI, Arial, tahoma; font-size:20px; color:#ff6600; font-weight:bold;}
+.GreenSmallText{font-family:segoe UI, Arial, tahoma; font-size:20px; color:#156d00; font-weight:bold;}
+.GreenSmallerText{font-family:segoe UI, Arial, tahoma; font-size:16px; color:#156d00; font-weight:bold;}
+.YellowSmallText{font-family:segoe UI, Arial, tahoma; font-size:20px; color:#fd8606; font-weight:bold;}
+.Low{ font-family:tahoma; font-size:10px; color:#11731c;}
+.Medium{ font-family:tahoma; font-size:10px; color:#d35508;}
+.High{ font-family:tahoma; font-size:10px; color:#ff0003;}
+
+
+
+ .GreenTextNew{font-family:Tahoma, Arial; font-size:11px; color:#006000;}
+
+.SRDamageLevelBlackText{font-family:Tahoma, Arial; font-size:11px; color:#090909;}
+.SRDamageLevelBlackTextBold{font-family:Tahoma, Arial; font-size:11px; color:#090909;font-weight:bold;}
+.HandCurserClass{cursor:hand;cursor:default; cursor:pointer;}
+
+.AttentionTextit{font-family:segoe UI, Arial, tahoma; font-size:17px; color:#ffffff; }
+.AttentionTextBoldit{font-family:segoe UI, Arial, tahoma; font-size:17px; color:#ffffff; font-weight:bold;}
+
+

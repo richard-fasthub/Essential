@@ -1,0 +1,15 @@
+09/22/2016 19:08:07       Info            Activity ID: 7eda8680-9ec9-44df-bdf8-c7aa732bba5f
+09/22/2016 19:08:07       Info            App Version: 1.6.2221.0
+09/22/2016 19:08:08       Info            Insider's Hub starting; Online state: 'Unknown', DebuggerAttached: 'False', Debug: 'False'
+09/22/2016 19:08:08       Info            OnActivated.Start[1895]
+09/22/2016 19:08:08       Info            PilotsHubProtocolActivated, kind: Protocol, prevexecstate: NotRunning, uri: windows-feedback:///?ContextID=610&SearchString=Windows Network Diagnostics+"manually+connect"+"wireless+network"+"profile"
+09/22/2016 19:08:08       Info            HandleActivation.Start[1974]
+09/22/2016 19:08:08       Info            GetInstalledLegacyApps.Start[2080]
+09/22/2016 19:08:08       Info            GetInstalledModernApps.Start[2137]
+09/22/2016 19:08:08       Info            GetPublicModernApps.Start[2137]
+09/22/2016 19:08:08       Info            HandleActivation.Start[4700]
+09/22/2016 19:08:08       Info            Network status change detected
+09/22/2016 19:08:08       Info            PilotsHubStartLaunch
+09/22/2016 19:08:08       Info            IsLegacyUifActivation True
+09/22/2016 19:08:08       Info            HandleActivation.Stop[6380] Elapsed MS [1680]
+09/22/2016 19:08:08       Info            OnActivated.Stop[6380] Elapsed MS [4485]

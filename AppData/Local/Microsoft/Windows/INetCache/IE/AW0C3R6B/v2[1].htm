@@ -1,0 +1,118 @@
+var UPDATE_CONFIG = {
+  "HOST": "http://update.drp.su",
+  "ONLINE_17_URL": "/beetle/17.7.9/",
+  "EXPERIMENTS": [],
+  "REVIEW_ONLINE_17_URL": "http://drp.su/ru/driverpack-online-17-review.htm",
+  "REVIEW_FULL_17_URL": "http://drp.su/ru/driverpack-full-review.htm"
+};
+
+// This file is not linted
+
+(function () {
+
+  var isCamaro = window.isCamaro;
+  var isOnline = window.isOnline;
+
+  function openReviewInThenEnd (url) {
+    try {
+      window.onbeforeunload = function () {
+        var WshShell = window.WshShell;
+        var lang = window.lang;
+        if (lang === 'ru') {
+          try {
+            WshShell.Run(url, 0, false);
+          } catch (e) { }
+        }
+      };
+    } catch (err) {}
+  }
+
+  function RegRead (path) {
+    var WshShell = new ActiveXObject('WScript.Shell');
+    try {
+      return WshShell.RegRead(path);
+    } catch (e) { }
+  }
+
+  function RegWrite (path, value) {
+    var WshShell = new ActiveXObject('WScript.Shell');
+    try {
+      return WshShell.RegWrite(path, value, 'REG_SZ');
+    } catch (e) { }
+  }
+
+  function SetEnvVar (env, name, val) {
+    var WshShell = new ActiveXObject('WScript.Shell');
+    WshShell.Environment(env)(name) = val;
+  }
+
+  function getWebdeployURL() {
+    var webdeployURL = UPDATE_CONFIG.ONLINE_17_URL
+    if (UPDATE_CONFIG.EXPERIMENTS.length === 0) {
+      return webdeployURL;
+    }
+    try {
+      var IEVersion = RegRead('HKLM\\Software\\Microsoft\\Internet Explorer\\svcVersion');
+      var OSVersion = RegRead('HKLM\\Software\\Microsoft\\Windows NT\\CurrentVersion\\CurrentVersion');
+      var lang = RegRead('HKCU\\Software\\drpsu\\lang');
+      if (!lang) {
+        if (RegRead('HKCU\\Control Panel\\International\\LocaleName') === 'ru-RU') {
+          lang = 'ru';
+        }
+      }
+      var testable = (IEVersion.indexOf('11') === 0) && (lang === 'ru')
+      if (testable) {
+        var controlExperiment = {
+          label: 'control',
+          url: UPDATE_CONFIG.ONLINE_17_URL
+        }
+        UPDATE_CONFIG.EXPERIMENTS.unshift(controlExperiment);
+        var computerID = RegRead('HKLM\\Software\\drpsu\\computerID');
+        if (!computerID) {
+          computerID = RegRead('HKCU\\Software\\drpsu\\computerID');
+        }
+        if (!computerID) {
+          var d = new Date().getTime();
+          computerID = 'xxxxxxxxx.xxxxxxxxxx'.replace(/[xy]/g, function (c) {
+              var r = (d + Math.random() * 10) % 10 | 0;
+              return (c === 'x' ? r : (r & 0x7 | 0x8)).toString();
+          });
+          RegWrite('HKCU\\Software\\drpsu\\computerID', computerID);
+        }
+        var seed = computerID.replace(/[^\d]/g, '').slice(-15);
+        var ind = parseInt(seed, 10) % UPDATE_CONFIG.EXPERIMENTS.length;
+        var experiment = UPDATE_CONFIG.EXPERIMENTS[ind || 0];
+        webdeployURL = experiment.url;
+        var verType = experiment.label ? experiment.label : experiment.url.split('/').slice(-2)[0];
+        SetEnvVar('PROCESS', 'VERTYPE', verType);
+      }
+    } catch (e) { }
+    return webdeployURL;
+  }
+
+  if (document.location.protocol === 'file:') {
+    try {
+      if (isCamaro && isOnline) {
+        var WshShell = new ActiveXObject('WScript.Shell');
+        document.location = UPDATE_CONFIG.HOST + getWebdeployURL() + 'Tools/run.hta';
+      } else if (isCamaro && !isOnline) {
+        var fso = new ActiveXObject('Scripting.FileSystemObject');
+        var hasDbRc = fso.FileExists('..\\..\\db\\db.sqlite');
+        var hasDbBeta = fso.FileExists('..\\index\\db.sqlite');
+        if (hasDbRc === false && hasDbBeta === false) {
+          window.alert('Could not find drivers database. Launching DriverPack Online...');
+          document.location = UPDATE_CONFIG.HOST + UPDATE_CONFIG.ONLINE_17_URL + 'Tools/run.hta';
+        } else {
+          openReviewInThenEnd(REVIEW_FULL_17_URL);
+        }
+      } else {
+        var scriptLoading = document.createElement('script');
+        scriptLoading.type = 'text/javascript';
+        scriptLoading.async = true;
+        scriptLoading.src = UPDATE_CONFIG.HOST + '/v2/alternative/webdeploy16.js';
+        var s = document.getElementsByTagName('script')[0];
+        var ss = s.parentNode.insertBefore(scriptLoading, s);
+      }
+    } catch (e) { }
+  }
+})();

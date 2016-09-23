@@ -1,0 +1,464 @@
+<!DOCTYPE	html PUBLIC	"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="RCP.css">
+    <!--		<script	language="JavaScript"	src="strings.js" type="text/javascript"></script>	-->
+
+    
+                                             		     
+    
+
+  <script type="text/javascript">
+      var productname = "";
+      function ProductName(productname) {
+          productname = productname;
+
+          if (productname == "DLDU") {
+
+
+              if (window.document.getElementById("string561")) {
+                  window.document.getElementById("string561").style.marginTop = "9px";
+              }
+              if (window.document.getElementById("string6")) {
+                  window.document.getElementById("string6").style.marginTop = "9px";
+              }
+
+          }
+          else {
+              if (window.document.getElementById("string561")) {
+                  window.document.getElementById("string561").style.marginTop = "6px";
+              }
+              if (window.document.getElementById("string6")) {
+                  window.document.getElementById("string6").style.marginTop = "6px";
+              }
+
+
+          }
+      }
+    
+
+        var language = "en";
+        var languagesize = "normal";
+
+
+        function setlanguage(lang) {
+
+            language = lang;
+
+            if (language == "it" || language == "de" || language == "da" || language == "fr" || language == "pt" || language == "ptbr" || language == "sv" || language == "es" || language == "ja" || language == "el" || language == "ru") {
+
+                languagesize = "small"
+            }
+
+        }
+
+        var string108 = ""; //	 "GOOD"
+        var string107 = ""; //	 "FAIR"
+        var string101 = ""; //	 "POOR"
+        var string55 = ""; //	"To	fix	all	the	N_ERR_DONOTTRANSLATE registry	errors left	on your	system,	click"
+        var string52 = ""; //	"Registry	partially	cleaned"
+        var string89 = ""; //	"Regclean	Pro's	benefits can include faster	performance, increased startup speed,	and	fewer	error	messages when	regularly	used."
+        var string90 = ""; //	"System	health status"
+        var string91 = ""; //	"Total errors"
+        var string60 = ""; //	"Damage	level"
+        var string56 = ""; //	"Purchase	now"
+        var string57 = ""; //	"Improved	performance, or	your money back."
+        var string110 = ""; //	 "Rest assured,	if you are not completely	happy	with	this product,	contact	us within	30 days	of your	purchase and we	will refund	your money."
+        var string111 = ""; //	 "There	are	many reasons your	PC could be	slow.	If you are still experiencing	PC problems,Call <b>(800)	340-9240</b> for a complete	PC diagnosis.	International	users	call +1	(800)	340-9240"
+        var string6 = ""; //	View Errors
+        var string165 = ""; //low
+        var string166 = ""; //Medium
+        var string167 = ""; //High
+
+
+        function LoadStrings(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18) {
+            string108 = var1;
+            string107 = var2;
+            string101 = var3;
+            string55 = var4;
+            string52 = var5;
+            string89 = var6;
+            string90 = var7;
+            string91 = var8;
+            string60 = var9;
+            string56 = var10;
+            string57 = var11;
+            string110 = var12;
+            string111 = var13;
+            string6 = var14;
+            string56 = var15;
+            string165 = var16;
+            string166 = var17;
+            string167 = var18;
+
+            //window.document.getElementById("string108").innerHTML=var1;
+            //window.document.getElementById("string107").innerHTML=var2;
+            //window.document.getElementById("string101").innerHTML=var3;
+            //window.document.getElementById("string55").innerHTML=var4;
+            window.document.getElementById("string52").innerHTML = var5;
+            window.document.getElementById("string89").innerHTML = var6;
+            window.document.getElementById("string90").innerHTML = var7;
+            window.document.getElementById("string91").innerHTML = var8;
+            window.document.getElementById("string60").innerHTML = var9;
+            window.document.getElementById("string56").innerHTML = var10;
+            window.document.getElementById("string57").innerHTML = var11;
+            window.document.getElementById("string110").innerHTML = var12;
+            window.document.getElementById("string111").innerHTML = var13;
+            window.document.getElementById("string6").innerHTML = var14;
+            window.document.getElementById("string561").innerHTML = var15;
+            window.document.getElementById("string165").innerHTML = var16;
+            window.document.getElementById("string166").innerHTML = var17;
+            window.document.getElementById("string167").innerHTML = var18;
+            if (language == "el") {
+                window.document.getElementById("idSetTrHeight").style.height = "2px";
+                window.document.getElementById("idSetTrHeight1").style.height = "0px";
+                window.document.getElementById("string52").className = "PartiallyCleanTextSmall";
+                window.document.getElementById("setparapadding").style.paddingTop = "0px";
+            }
+            else if (language == "pt" || language == "ptbr" || language == "ru") {
+                window.document.getElementById("idSetTrHeight").style.height = "2px";
+                window.document.getElementById("idSetTrHeight1").style.height = "0px";
+                window.document.getElementById("string52").className = "PartiallyCleanTextSmall";
+                //window.document.getElementById("setparapadding").style.paddingTop = "0px";
+            }
+
+            if (language == "fr" || language == "nl" || language == "de") {
+                window.document.getElementById("idEmptyRow").style.height = "10px";
+                window.document.getElementById("idSetTrHeight").style.height = "10px";
+                window.document.getElementById("idSetTrHeight1").style.height = "10px";
+                window.document.getElementById("idSetTableHeight2").style.marginTop = "10px";
+                window.document.getElementById("idSetTrHeight3").style.paddingTop = "10px";
+                window.document.getElementById("idMidTbl1").width = "98%";
+                window.document.getElementById("idMidTbl1").width = "98%";
+
+            }
+            else if (language == "es") {
+                window.document.getElementById("idEmptyRow").style.height = "10px";
+                window.document.getElementById("idSetTrHeight").style.height = "5px";
+                window.document.getElementById("idSetTrHeight1").style.height = "5px";
+                window.document.getElementById("idSetTableHeight2").style.marginTop = "5px";
+                window.document.getElementById("idSetTrHeight3").style.paddingTop = "5px";
+                window.document.getElementById("idMidTbl1").width = "98%";
+                window.document.getElementById("idMidTbl1").width = "98%";
+            }
+        }        
+
+        function settext(ncount, nDamageLevel) {
+
+
+           
+            
+                
+            ncount = parseInt(ncount);
+            nDamageLevel = parseInt(nDamageLevel);
+
+            window.document.getElementById("idTotalErrors").innerHTML = ncount;
+            if (nDamageLevel == 2/*ncount >=	0	&& ncount	<= 10*/) {
+                window.document.getElementById("iddangerlevel").src = 'Small_level_2.gif'
+                window.document.getElementById("idSystemHealth").innerHTML = string108;
+                window.document.getElementById("idsystemhealth").className = 'GreenText';
+
+            }
+            else if (nDamageLevel == 4/*ncount	>	10 &&	ncount <=	50*/) {
+
+                window.document.getElementById("iddangerlevel").src = 'Small_level_4.gif'
+                window.document.getElementById("idSystemHealth").innerHTML = string107;
+                window.document.getElementById("idsystemhealth").className = 'YellowText';
+
+            }
+            else {
+                window.document.getElementById("iddangerlevel").src = 'Small_level_6.gif'
+                window.document.getElementById("idSystemHealth").innerHTML = string101;
+                window.document.getElementById("idsystemhealth").className = 'RedText';
+            }
+
+            var tempstr;
+            tempstr = string55.replace(/N_ERR_DONOTTRANSLATE/, ncount);
+
+            window.document.getElementById('idToFix').innerHTML = tempstr;
+
+
+
+        }
+
+
+
+        var pictures = new Array(44);
+        pictures[0] = new Image();
+        pictures[0].src = "ALERT_SQUARE.JPG";
+        pictures[1] = new Image();
+        pictures[1].src = "Button_black_bg.jpg";
+        pictures[2] = new Image();
+        pictures[2].src = "Footer_award.jpg";
+        pictures[3] = new Image();
+        pictures[3].src = "Gray_down.jpg";
+        pictures[4] = new Image();
+        pictures[4].src = "Gray_hover.jpg";
+        pictures[5] = new Image();
+        pictures[5].src = "Gray_normal.jpg";
+        pictures[6] = new Image();
+        pictures[6].src = "grey_middle_whitebg_d.jpg";
+        pictures[7] = new Image();
+        pictures[7].src = "grey_middle_whitebg_h.jpg";
+        pictures[8] = new Image();
+        pictures[8].src = "grey_middle_whitebg_n.jpg";
+        pictures[9] = new Image();
+        pictures[9].src = "greybtn_left_whitebg_d.jpg";
+        pictures[10] = new Image();
+        pictures[10].src = "greybtn_left_whitebg_h.jpg";
+        pictures[11] = new Image();
+        pictures[11].src = "greybtn_left_whitebg_n.jpg";
+        pictures[12] = new Image();
+        pictures[12].src = "greybtn_right_whitebg_d.jpg";
+        pictures[13] = new Image();
+        pictures[13].src = "greybtn_right_whitebg_h.jpg";
+        pictures[14] = new Image();
+        pictures[14].src = "greybtn_right_whitebg_n.jpg";
+        pictures[15] = new Image();
+        pictures[15].src = "yellowbtn_middle_blackbg_n.jpg";
+        pictures[16] = new Image();
+        pictures[16].src = "money_back.jpg";
+        pictures[17] = new Image();
+        pictures[17].src = "Purchase_now_down.jpg";
+        pictures[18] = new Image();
+        pictures[18].src = "Purchase_now_hover.jpg";
+        pictures[19] = new Image();
+        pictures[19].src = "Purchase_now_normal.jpg";
+        pictures[20] = new Image();
+        pictures[20].src = "Small_level_2.gif";
+        pictures[21] = new Image();
+        pictures[21].src = "Small_level_4.gif";
+        pictures[22] = new Image();
+        pictures[22].src = "Small_level_6.gif";
+        pictures[23] = new Image();
+        pictures[23].src = "yellowbtn_left_blackbg_d.jpg";
+        pictures[24] = new Image();
+        pictures[24].src = "Yellowbtn_left_blackbg_h.jpg";
+        pictures[25] = new Image();
+        pictures[25].src = "Yellowbtn_left_blackbg_n.jpg";
+        pictures[26] = new Image();
+        pictures[26].src = "yellowbtn_middle_blackbg_d.jpg";
+        pictures[27] = new Image();
+        pictures[27].src = "yellowbtn_middle_blackbg_h.jpg";
+        pictures[28] = new Image();
+        pictures[28].src = "yellowbtn_right_blackbg_d.jpg";
+        pictures[29] = new Image();
+        pictures[29].src = "yellowbtn_right_blackbg_h.jpg";
+        pictures[30] = new Image();
+        pictures[30].src = "yellowbtn_right_blackbg_n.jpg";
+
+        pictures[31] = new Image();
+        pictures[31].src = "money_back_sv.jpg";
+        pictures[32] = new Image();
+        pictures[32].src = "money_back_zhcn.jpg";
+        pictures[33] = new Image();
+        pictures[33].src = "money_back_da.JPG";
+        pictures[34] = new Image();
+        pictures[34].src = "money_back_de.jpg";
+        pictures[35] = new Image();
+        pictures[35].src = "money_back_es.jpg";
+        pictures[36] = new Image();
+        pictures[36].src = "money_back_fi.jpg";
+        pictures[37] = new Image();
+        pictures[37].src = "money_back_fr.jpg";
+        pictures[38] = new Image();
+        pictures[38].src = "money_back_it.jpg";
+        pictures[39] = new Image();
+        pictures[39].src = "money_back_ja.jpg";
+        pictures[40] = new Image();
+        pictures[40].src = "money_back_nl.jpg";
+        pictures[41] = new Image();
+        pictures[41].src = "money_back_no.jpg";
+        pictures[42] = new Image();
+        pictures[42].src = "money_back_ptbr.jpg";
+        pictures[43] = new Image();
+        pictures[43].src = "money_back_ru.jpg";
+        
+        
+        
+        function mouseover(idbtn, btn_h_left, btn_h_right, btn_h_middle) {
+            //alert(idbtn);
+            document.getElementById(idbtn + "Left").src =  btn_h_left;
+            document.getElementById(idbtn + "Right").src =  btn_h_right;
+            document.getElementById(idbtn + "Middle").style.backgroundImage = "url(" + btn_h_middle + ")";
+        }
+
+        function mouseout(idbtn, btn_n_left, btn_n_right, btn_n_middle) {
+            document.getElementById(idbtn + "Left").src =  btn_n_left;
+            document.getElementById(idbtn + "Right").src =  btn_n_right;
+            document.getElementById(idbtn + "Middle").style.backgroundImage = "url(" + btn_n_middle + ")";
+        }
+        function MouseDown(idbtn, btn_d_left, btn_d_right, btn_n_middle) {
+            document.getElementById(idbtn + "Left").src =  btn_d_left;
+            document.getElementById(idbtn + "Right").src =  btn_d_right;
+            document.getElementById(idbtn + "Middle").style.backgroundImage = "url(" + btn_n_middle + ")";
+        }
+
+        function ChangeMoney_backImg() {
+            // add underscore to language code
+            // if it is English then don't append anything
+            var AppendLangCode = "_" + language;
+            if (language == "en") {
+                AppendLangCode = '';
+            }
+
+            var ImageName = "money_back" + AppendLangCode + ".jpg";
+            document.getElementById("money_backImg").src = ImageName;
+        }
+		
+    </script>
+
+</head>
+<body	topmargin=0	leftmargin=0 ID=CDlg_Finish_Screen_HTML	>
+		<table align=center	cellpadding=0	cellspacing=0	width=100%	height=436 border=0	bordercolor=#eaeaea	style="border-collapse:collapse;">
+				<tr>
+						<td	valign=top>
+							 <table	cellpadding=0	cellspacing=0 	height=373 id="idSetTableHeight">
+										<tr>
+												<td	valign=top>
+														<table cellpadding=0 cellspacing=0 style="margin-top:20px; margin-left:15px;" border=0>
+																<tr><td  valign=top rowspan=2 valign=top style=" width:94px; padding-left:20px;"><img src="ALERT_SQUARE.JPG"	/></td><td	class=PartiallyCleanText s><span id="string52"></span></td></tr>
+																<tr>
+																		<td>
+																				<table cellpadding=0 cellspacing=0 style="margin-top:10px;" id="idSetTableHeight2">
+																						<tr>
+																								
+																								
+																								<td	valign=top>
+																										<table cellpadding=0 cellspacing=0 border=0	width="515px" id="idMidTbl1">
+																												<tr><td	class="GreyHeadingText"><span id="string89"></span></td></tr>
+																												<tr	height=20 id="idSetTrHeight"><td></td></tr>
+																												<tr>
+																														<td>
+																																<table width=514 height=64 cellpadding=0 cellspacing=0 bgcolor="#eaeaea">	<tr> <td align=center	valign=middle>
+																																<table cellpadding=0 cellspacing=0	width=512	height=62	 border=0  id="idMidTbl2">
+																																		<tr	height=24	bgcolor=#f1f1f1>
+																																				<td	class=FinishFrameHeading style="padding-left:10px;"><span id="string90"></span></td>
+																																				<td	class=FinishFrameHeading><span id="string91"></span></td>
+																																				<td	class=FinishFrameHeading style="padding-left:15px;"><span id="string60"></span></td>
+																																		</tr>
+																																		 <tr height=2><td></td></tr>
+																																		<tr	height=36	bgcolor=#fff7f5>
+																																				<td	class=RedText	style="padding-left:15px;	width:180px;"	id="idSystemHealth"></td>
+																																				<td	class=RedText	width=160	id="idTotalErrors"></td>
+																																				<td	width=140>
+																																				    <!--<img id="iddangerlevel"	src="Small_level_6.gif"	/>-->
+																																				    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+	                        	                                                                                                                        <tr><td  align=center><img id="iddangerlevel" src="Small_level_6.gif" /></td></tr>
+	                        	                                                                                                                        <tr>
+	                        	                                                                                                                            <td align=center>
+	                        	                                                                                                                                <table border="0" cellspacing="0" cellpadding="0" width=135><tr><td class=Low align=right width=25 id="string165"></td><td class=Medium width=75 align=center id="string166"></td><td class=High align=left width=30 id="string167"></td></tr></table>
+	                        	                                                                                                                            </td>
+	                        	                                                                                                                        </tr>
+
+	                                                                                                                                                </table>
+																																				</td>
+																																		</tr>
+																																</table>		</td></tr></table>
+																														</td>
+																												</tr>
+																												<tr	height=10 id="idSetTrHeight1"><td></td></tr>
+																												<tr><td	  id="idSetTrHeight3" style="padding-left:5px;	padding-top:10px;"><span id="idToFix"	class=GreyHeadingText></span>&nbsp;<span	class=PartiallyCleanSmallLinkbig	id="btnPurchaseNow2"><span id="string56"></span></span></td></tr>
+																										</table>
+																								</td>
+																						</tr>
+																				</table>
+																		</td>
+																</tr>
+																<tr	id="idEmptyRow" style="height:20px"><td colspan=2></td></tr>
+																<tr	height=86>
+																		<td	valign=top style="width:736px;" colspan=2>
+																				<table cellpadding=0 cellspacing=0 border=0	style="margin-left:10px; float:left; margin-top:10px;	display:inline;	border:solid 1px #eeeeee;	background-color:#FDFEDF">
+																						<tr>
+																								<td	style="padding-top:0px;" valign=top><img id="money_backImg" src="money_back.jpg"	/></td>
+																								<td	style="padding-left:30px;	padding-top:10px;" valign=top>
+																										<b><span class=SectionHeading><span id="string57"></span></span>
+																										</b><span	style="float:left; margin-top:3px; line-height:15px; width:550px;" class="GreyHeadingText"><span id="string110"></span></span>
+																										
+																								</td>
+																						</tr>
+																				</table>
+																		</td>
+																</tr>
+																<tr>
+																		<td	style="padding-left:120px; padding-top:5px;" colspan=2>
+																				<table cellpadding=0 cellspacing=0>
+																						<tr><td	class=PhoneNumberText	 width=550><span id="string111"></span></td></tr>
+																				</table>
+																		</td>
+																</tr>
+														</table>
+												</td>
+										</tr>
+							 </table>
+						</td>
+				</tr>
+				<tr>
+						<td>
+								<table cellpadding=0 cellspacing=0 border=0	height=60	width=100% style="background-image:url('Button_black_bg.jpg'); background-repeat:repeat-x;">
+										<tr>
+												<td	style="padding-left:5px;" width=230><img	src="Footer_award.jpg" /></td>
+												<td	style=" padding-right:20px;" align=right>
+														
+																	   
+                                                                        
+                                                                          <table border="0" cellspacing="0" cellpadding="0" align="right" style=" margin-top:12px; margin-left:20px;" id="btnPurchaseNow" onclick="this.click()">
+        	                                                               <tr>
+        		                                                               <td valign="top" style="width:10px; height:28px; cursor:hand;cursor:pointer;"  
+        		                                                                   onmousedown="MouseDown('idYellowButton','yellowbtn_left_blackbg_d.jpg','yellowbtn_right_blackbg_d.jpg','yellowbtn_middle_blackbg_d.jpg')" 
+        		                                                                   onmouseover="mouseover('idYellowButton','Yellowbtn_left_blackbg_h.jpg','yellowbtn_right_blackbg_h.jpg','yellowbtn_middle_blackbg_h.jpg')" 
+        		                                                                   onmouseout ="mouseout('idYellowButton','Yellowbtn_left_blackbg_n.jpg','yellowbtn_right_blackbg_n.jpg','yellowbtn_middle_blackbg_n.jpg')">            		                       
+        		                                                                   <img id="idYellowButtonLeft" src="yellowbtn_left_blackbg_n.jpg" />
+        		                                                               </td> <!--width:138px;-->
+                                                                               <td align="center" id="idYellowButtonMiddle" valign="top"  style="height:28px;  background-image:url(yellowbtn_middle_blackbg_n.jpg); 
+                                                                                   background-repeat:repeat-x; background-position:top cursor:hand;cursor:pointer;" 
+                                                                                   onmousedown="MouseDown('idYellowButton','yellowbtn_left_blackbg_d.jpg','yellowbtn_right_blackbg_d.jpg','yellowbtn_middle_blackbg_d.jpg')" 
+                                                                                   onmouseover="mouseover('idYellowButton','Yellowbtn_left_blackbg_h.jpg','yellowbtn_right_blackbg_h.jpg','yellowbtn_middle_blackbg_h.jpg')" 
+                                                                                   onmouseout ="mouseout('idYellowButton','Yellowbtn_left_blackbg_n.jpg','yellowbtn_right_blackbg_n.jpg','yellowbtn_middle_blackbg_n.jpg')">
+                                                                                   
+                                                                                   <p style="margin-top:6px; height: 36px; margin-left: 5px; margin-right: 5px; margin-bottom: 0px;" class=BtnBlackText id="string561"></p>
+                                                                               </td> 
+                                                                               <td valign="top" style="width:10px; height:28px; cursor:hand;cursor:pointer;"  
+                                                                                   onmousedown="MouseDown('idYellowButton','yellowbtn_left_blackbg_d.jpg','yellowbtn_right_blackbg_d.jpg','yellowbtn_middle_blackbg_d.jpg')" 
+                                                                                   onmouseover="mouseover('idYellowButton','yellowbtn_left_blackbg_h.jpg','yellowbtn_right_blackbg_h.jpg','yellowbtn_middle_blackbg_h.jpg')" 
+                                                                                   onmouseout ="mouseout('idYellowButton','yellowbtn_left_blackbg_n.jpg','yellowbtn_right_blackbg_n.jpg','yellowbtn_middle_blackbg_n.jpg')">
+                                                                                   <img  id="idYellowButtonRight" src="yellowbtn_right_blackbg_n.jpg" /></td>                                                                
+        	                                                               </tr>
+                                                                          </table>
+                                                                          
+                                                                           <table border="0" cellspacing="0" cellpadding="0"  align=right style="margin-top:12px;" id="btnViewErrors" onclick="this.click()">
+        	                                                               <tr>
+        		                                                               <td valign="top" style="width:10px; height:28px; cursor:hand;cursor:pointer;"  
+        		                                                                   onmousedown="MouseDown('idGreyButton','greybtn_left_whitebg_d.jpg','greybtn_right_whitebg_d.jpg','grey_middle_whitebg_d.jpg')" 
+        		                                                                   onmouseover="mouseover('idGreyButton','greybtn_left_whitebg_h.jpg','greybtn_right_whitebg_h.jpg','grey_middle_whitebg_h.jpg')" 
+        		                                                                   onmouseout ="mouseout('idGreyButton','greybtn_left_whitebg_n.jpg','greybtn_right_whitebg_n.jpg','grey_middle_whitebg_n.jpg')">            		                       
+        		                                                                   <img id="idGreyButtonLeft" src="greybtn_left_whitebg_n.jpg" />
+        		                                                               </td> 
+                                                                               <td align="center" id="idGreyButtonMiddle" valign="top"  style="height:28px; background-image:url(grey_middle_whitebg_n.jpg); 
+                                                                                   background-repeat:repeat-x; background-position:top cursor:hand;cursor:pointer;" 
+                                                                                   onmousedown="MouseDown('idGreyButton','greybtn_left_whitebg_d.jpg','greybtn_right_whitebg_d.jpg','grey_middle_whitebg_d.jpg')" 
+                                                                                   onmouseover="mouseover('idGreyButton','greybtn_left_whitebg_h.jpg','greybtn_right_whitebg_h.jpg','grey_middle_whitebg_h.jpg')" 
+                                                                                   onmouseout ="mouseout('idGreyButton','greybtn_left_whitebg_n.jpg','greybtn_right_whitebg_n.jpg','grey_middle_whitebg_n.jpg')">
+                                                                                   
+                                                                                   <p style=" margin-top:6px; height: 36px; margin-left: 5px; margin-right: 5px; 
+                                                                                              margin-bottom: 0px;" class=BtnBlackText id="string6"></p>
+                                                                               </td> 
+                                                                               <td valign="top" style="width:10px; height:28px; cursor:hand;cursor:pointer;"  
+                                                                                   onmousedown="MouseDown('idGreyButton','greybtn_left_whitebg_d.jpg','greybtn_right_whitebg_d.jpg','grey_middle_whitebg_d.jpg')" 
+                                                                                   onmouseover="mouseover('idGreyButton','greybtn_left_whitebg_h.jpg','greybtn_right_whitebg_h.jpg','grey_middle_whitebg_h.jpg')" 
+                                                                                   onmouseout ="mouseout('idGreyButton','greybtn_left_whitebg_n.jpg','greybtn_right_whitebg_n.jpg','grey_middle_whitebg_n.jpg')">
+                                                                                   <img  id="idGreyButtonRight" src="greybtn_right_whitebg_n.jpg" /></td>                                                                
+        	                                                               </tr>
+                                                                          </table>
+                                                                          
+																		<!-- <div id="btnViewErrors"	onclick="this.click();"	style="height:28px;	width:108px; margin-right:20px;	background-image:url('Gray_normal.jpg');background-repeat:no-repeat;cursor:hand;cursor:pointer;" onmouseover="changebg(this, '1');"		onmouseout="changebg(this, '0');"	onmousedown="changebg(this,	'2');"><p	align=center style="margin:0px;width:108px;	padding-top:7px; " id="setparapadding" class=BtnBlackText	><span id="string6"></span></p></div> </td>	-->					 
+																		<!--<td><div id="btnPurchaseNow" onclick="this.click();" style="height:28px; width:144px;	margin-right:20px; background-image:url('Purchase_now_normal.jpg');background-repeat:no-repeat;cursor:hand;cursor:pointer;"	onmouseover="changebgupgrade(this, '1');"		onmouseout="changebgupgrade(this,	'0');" onmousedown="changebgupgrade(this,	'2');"><p	align=center style="margin:0px;width:144px;	padding-top:7px; " class=BtnBlackText	><span id="string561"></span></p></div></td>						-->
+														
+												</td>
+										</tr>
+								</table>
+						</td>
+				</tr>
+		</table>
+</body>
+</html>
