@@ -1,5 +1,7 @@
 import java.text.DateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
@@ -17,6 +19,12 @@ public class MainDate {
         System.out.println(df.format(d2));
         
         LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(ldt);
         
+        LocalDate ld = LocalDate.of(2016, 1, 20);
+        System.out.print(ld);
+        
+        DateTimeFormatter dtf = DateTimeFormatter.ISO_DATE;
+        System.out.println(dtf.format(ld));
     }
 }
